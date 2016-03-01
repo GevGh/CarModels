@@ -8,24 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		EF5153DB1C85FFF1000CAA1C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5153DA1C85FFF1000CAA1C /* main.m */; };
-		EF5153DE1C85FFF1000CAA1C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5153DD1C85FFF1000CAA1C /* AppDelegate.m */; };
-		EF5153E11C85FFF1000CAA1C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5153E01C85FFF1000CAA1C /* ViewController.m */; };
 		EF5153E41C85FFF1000CAA1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF5153E21C85FFF1000CAA1C /* Main.storyboard */; };
-		EF5153E61C85FFF1000CAA1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF5153E51C85FFF1000CAA1C /* Assets.xcassets */; };
 		EF5153E91C85FFF1000CAA1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF5153E71C85FFF1000CAA1C /* LaunchScreen.storyboard */; };
+		EF83F5CD1C86078300603204 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF83F5CC1C86078300603204 /* ViewController.m */; };
+		EF83F5D01C86079100603204 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF83F5CF1C86079100603204 /* AppDelegate.m */; };
+		EF83F5D21C86079C00603204 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF83F5D11C86079C00603204 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EF5153D61C85FFF1000CAA1C /* CarModels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarModels.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF5153DA1C85FFF1000CAA1C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		EF5153DC1C85FFF1000CAA1C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		EF5153DD1C85FFF1000CAA1C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		EF5153DF1C85FFF1000CAA1C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		EF5153E01C85FFF1000CAA1C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		EF5153E31C85FFF1000CAA1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		EF5153E51C85FFF1000CAA1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF5153E81C85FFF1000CAA1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF5153EA1C85FFF1000CAA1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF83F5CB1C86078300603204 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = "Classes/Presentation Layer/ViewControllers/ViewController.h"; sourceTree = "<group>"; };
+		EF83F5CC1C86078300603204 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = "Classes/Presentation Layer/ViewControllers/ViewController.m"; sourceTree = "<group>"; };
+		EF83F5CE1C86079100603204 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate/AppDelegate.h; sourceTree = "<group>"; };
+		EF83F5CF1C86079100603204 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Classes/AppDelegate/AppDelegate.m; sourceTree = "<group>"; };
+		EF83F5D11C86079C00603204 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Assets/Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,14 +58,9 @@
 		EF5153D81C85FFF1000CAA1C /* CarModels */ = {
 			isa = PBXGroup;
 			children = (
-				EF5153DC1C85FFF1000CAA1C /* AppDelegate.h */,
-				EF5153DD1C85FFF1000CAA1C /* AppDelegate.m */,
-				EF5153DF1C85FFF1000CAA1C /* ViewController.h */,
-				EF5153E01C85FFF1000CAA1C /* ViewController.m */,
-				EF5153E21C85FFF1000CAA1C /* Main.storyboard */,
-				EF5153E51C85FFF1000CAA1C /* Assets.xcassets */,
-				EF5153E71C85FFF1000CAA1C /* LaunchScreen.storyboard */,
-				EF5153EA1C85FFF1000CAA1C /* Info.plist */,
+				EF83F5C51C8605D400603204 /* Classes */,
+				EF83F5C91C86061F00603204 /* Design */,
+				EF83F5CA1C86064A00603204 /* Assets */,
 				EF5153D91C85FFF1000CAA1C /* Supporting Files */,
 			);
 			path = CarModels;
@@ -74,9 +69,62 @@
 		EF5153D91C85FFF1000CAA1C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EF5153EA1C85FFF1000CAA1C /* Info.plist */,
 				EF5153DA1C85FFF1000CAA1C /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EF83F5C51C8605D400603204 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				EF83F5C71C8605FB00603204 /* Presentation Layer */,
+				EF83F5C61C8605E400603204 /* AppDelegate */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		EF83F5C61C8605E400603204 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				EF83F5CE1C86079100603204 /* AppDelegate.h */,
+				EF83F5CF1C86079100603204 /* AppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		EF83F5C71C8605FB00603204 /* Presentation Layer */ = {
+			isa = PBXGroup;
+			children = (
+				EF83F5C81C86060800603204 /* ViewControllers */,
+			);
+			name = "Presentation Layer";
+			sourceTree = "<group>";
+		};
+		EF83F5C81C86060800603204 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				EF83F5CB1C86078300603204 /* ViewController.h */,
+				EF83F5CC1C86078300603204 /* ViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		EF83F5C91C86061F00603204 /* Design */ = {
+			isa = PBXGroup;
+			children = (
+				EF5153E21C85FFF1000CAA1C /* Main.storyboard */,
+				EF5153E71C85FFF1000CAA1C /* LaunchScreen.storyboard */,
+			);
+			name = Design;
+			sourceTree = "<group>";
+		};
+		EF83F5CA1C86064A00603204 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				EF83F5D11C86079C00603204 /* Assets.xcassets */,
+			);
+			name = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -110,6 +158,7 @@
 				TargetAttributes = {
 					EF5153D51C85FFF1000CAA1C = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = BU489VE38D;
 					};
 				};
 			};
@@ -137,7 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF5153E91C85FFF1000CAA1C /* LaunchScreen.storyboard in Resources */,
-				EF5153E61C85FFF1000CAA1C /* Assets.xcassets in Resources */,
+				EF83F5D21C86079C00603204 /* Assets.xcassets in Resources */,
 				EF5153E41C85FFF1000CAA1C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,9 +198,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF5153E11C85FFF1000CAA1C /* ViewController.m in Sources */,
-				EF5153DE1C85FFF1000CAA1C /* AppDelegate.m in Sources */,
+				EF83F5CD1C86078300603204 /* ViewController.m in Sources */,
 				EF5153DB1C85FFF1000CAA1C /* main.m in Sources */,
+				EF83F5D01C86079100603204 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,10 +312,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CarModels/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = home.CarModels;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -274,10 +328,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CarModels/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = home.CarModels;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -300,6 +359,7 @@
 				EF5153EF1C85FFF1000CAA1C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
