@@ -1,18 +1,20 @@
 //
-//  ViewController.m
+//  MainViewController.m
 //  CarModels
 //
 //  Created by Gevorg Ghukasyan on 2016-03-01.
 //  Copyright © 2016 Gevorg Ghukasyan. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "MainViewController.h"
 
-@interface ViewController ()
+@interface MainViewController ()
+
+@property (weak, nonatomic) IBOutlet UITableView *tableViewMain;
 
 @end
 
-@implementation ViewController
+@implementation MainViewController
 
 - (void)viewDidLoad {
 

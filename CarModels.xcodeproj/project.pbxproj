@@ -10,9 +10,12 @@
 		EF5153DB1C85FFF1000CAA1C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5153DA1C85FFF1000CAA1C /* main.m */; };
 		EF5153E41C85FFF1000CAA1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF5153E21C85FFF1000CAA1C /* Main.storyboard */; };
 		EF5153E91C85FFF1000CAA1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF5153E71C85FFF1000CAA1C /* LaunchScreen.storyboard */; };
-		EF83F5CD1C86078300603204 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF83F5CC1C86078300603204 /* ViewController.m */; };
+		EF83F5CD1C86078300603204 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF83F5CC1C86078300603204 /* MainViewController.m */; };
 		EF83F5D01C86079100603204 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF83F5CF1C86079100603204 /* AppDelegate.m */; };
 		EF83F5D21C86079C00603204 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF83F5D11C86079C00603204 /* Assets.xcassets */; };
+		EFEF6AAF1C8F509C0072FBE2 /* LogoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFEF6AAE1C8F509C0072FBE2 /* LogoTableViewCell.m */; };
+		EFEF6AB71C8F54300072FBE2 /* ModelLogoInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EFEF6AB61C8F54300072FBE2 /* ModelLogoInfo.m */; };
+		EFEF6ABF1C8F552A0072FBE2 /* ServiceLogo.m in Sources */ = {isa = PBXBuildFile; fileRef = EFEF6ABE1C8F552A0072FBE2 /* ServiceLogo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,11 +24,17 @@
 		EF5153E31C85FFF1000CAA1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EF5153E81C85FFF1000CAA1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF5153EA1C85FFF1000CAA1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EF83F5CB1C86078300603204 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = "Classes/Presentation Layer/ViewControllers/ViewController.h"; sourceTree = "<group>"; };
-		EF83F5CC1C86078300603204 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = "Classes/Presentation Layer/ViewControllers/ViewController.m"; sourceTree = "<group>"; };
+		EF83F5CB1C86078300603204 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = "Classes/Presentation Layer/ViewControllers/MainViewController.h"; sourceTree = "<group>"; };
+		EF83F5CC1C86078300603204 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = "Classes/Presentation Layer/ViewControllers/MainViewController.m"; sourceTree = "<group>"; };
 		EF83F5CE1C86079100603204 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate/AppDelegate.h; sourceTree = "<group>"; };
 		EF83F5CF1C86079100603204 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Classes/AppDelegate/AppDelegate.m; sourceTree = "<group>"; };
 		EF83F5D11C86079C00603204 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Assets/Assets.xcassets; sourceTree = "<group>"; };
+		EFEF6AAD1C8F509C0072FBE2 /* LogoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogoTableViewCell.h; path = "Classes/Presentation Layer/Views/cells/LogoCell/LogoTableViewCell.h"; sourceTree = "<group>"; };
+		EFEF6AAE1C8F509C0072FBE2 /* LogoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LogoTableViewCell.m; path = "Classes/Presentation Layer/Views/cells/LogoCell/LogoTableViewCell.m"; sourceTree = "<group>"; };
+		EFEF6AB51C8F54300072FBE2 /* ModelLogoInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ModelLogoInfo.h; path = Classes/Models/Logo/ModelLogoInfo.h; sourceTree = "<group>"; };
+		EFEF6AB61C8F54300072FBE2 /* ModelLogoInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ModelLogoInfo.m; path = Classes/Models/Logo/ModelLogoInfo.m; sourceTree = "<group>"; };
+		EFEF6ABD1C8F552A0072FBE2 /* ServiceLogo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServiceLogo.h; path = Classes/AppLayers/Services/Logo/ServiceLogo.h; sourceTree = "<group>"; };
+		EFEF6ABE1C8F552A0072FBE2 /* ServiceLogo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServiceLogo.m; path = Classes/AppLayers/Services/Logo/ServiceLogo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +87,8 @@
 		EF83F5C51C8605D400603204 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				EFEF6AB81C8F54A80072FBE2 /* AppLayers */,
+				EFEF6AB01C8F53A30072FBE2 /* Models */,
 				EF83F5C71C8605FB00603204 /* Presentation Layer */,
 				EF83F5C61C8605E400603204 /* AppDelegate */,
 			);
@@ -96,6 +107,7 @@
 		EF83F5C71C8605FB00603204 /* Presentation Layer */ = {
 			isa = PBXGroup;
 			children = (
+				EFEF6AAA1C8F4FFD0072FBE2 /* Views */,
 				EF83F5C81C86060800603204 /* ViewControllers */,
 			);
 			name = "Presentation Layer";
@@ -104,8 +116,8 @@
 		EF83F5C81C86060800603204 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				EF83F5CB1C86078300603204 /* ViewController.h */,
-				EF83F5CC1C86078300603204 /* ViewController.m */,
+				EF83F5CB1C86078300603204 /* MainViewController.h */,
+				EF83F5CC1C86078300603204 /* MainViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -125,6 +137,65 @@
 				EF83F5D11C86079C00603204 /* Assets.xcassets */,
 			);
 			name = Assets;
+			sourceTree = "<group>";
+		};
+		EFEF6AAA1C8F4FFD0072FBE2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EFEF6AAB1C8F50070072FBE2 /* Cells */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		EFEF6AAB1C8F50070072FBE2 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				EFEF6AAC1C8F50120072FBE2 /* LogoCell */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		EFEF6AAC1C8F50120072FBE2 /* LogoCell */ = {
+			isa = PBXGroup;
+			children = (
+				EFEF6AAD1C8F509C0072FBE2 /* LogoTableViewCell.h */,
+				EFEF6AAE1C8F509C0072FBE2 /* LogoTableViewCell.m */,
+			);
+			name = LogoCell;
+			sourceTree = "<group>";
+		};
+		EFEF6AB01C8F53A30072FBE2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EFEF6AB41C8F53FD0072FBE2 /* InitalModel */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		EFEF6AB41C8F53FD0072FBE2 /* InitalModel */ = {
+			isa = PBXGroup;
+			children = (
+				EFEF6AB51C8F54300072FBE2 /* ModelLogoInfo.h */,
+				EFEF6AB61C8F54300072FBE2 /* ModelLogoInfo.m */,
+			);
+			name = InitalModel;
+			sourceTree = "<group>";
+		};
+		EFEF6AB81C8F54A80072FBE2 /* AppLayers */ = {
+			isa = PBXGroup;
+			children = (
+				EFEF6AB91C8F54B50072FBE2 /* Service */,
+			);
+			name = AppLayers;
+			sourceTree = "<group>";
+		};
+		EFEF6AB91C8F54B50072FBE2 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				EFEF6ABD1C8F552A0072FBE2 /* ServiceLogo.h */,
+				EFEF6ABE1C8F552A0072FBE2 /* ServiceLogo.m */,
+			);
+			name = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,8 +269,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF83F5CD1C86078300603204 /* ViewController.m in Sources */,
+				EF83F5CD1C86078300603204 /* MainViewController.m in Sources */,
 				EF5153DB1C85FFF1000CAA1C /* main.m in Sources */,
+				EFEF6ABF1C8F552A0072FBE2 /* ServiceLogo.m in Sources */,
+				EFEF6AAF1C8F509C0072FBE2 /* LogoTableViewCell.m in Sources */,
+				EFEF6AB71C8F54300072FBE2 /* ModelLogoInfo.m in Sources */,
 				EF83F5D01C86079100603204 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
