@@ -15,7 +15,6 @@
     
     NSMutableArray <__kindof ModelLogoInfo*> *models = [[NSMutableArray alloc] init];
     
-    
     ModelLogoInfo *modelAcura = [[ModelLogoInfo alloc] init];
     modelAcura.imageName = @"logo_acura";
     modelAcura.logoName = @"Acura";
