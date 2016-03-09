@@ -7,12 +7,14 @@
 //
 
 #import "LogoTableViewCell.h"
+#import "ModelLogoInfo.h"
 
 @interface LogoTableViewCell ()
 
 @property (weak, nonatomic) IBOutlet UIView *viewMain;
 @property (weak, nonatomic) IBOutlet UIImageView *imageViewBackground;
 @property (weak, nonatomic) IBOutlet UIImageView *imageViewLogo;
+@property (weak, nonatomic) IBOutlet UILabel *labelLogoName;
 
 @end
 
@@ -24,8 +26,10 @@
     self.viewMain.backgroundColor = [UIColor clearColor];
 }
 
-- (void)configureView {
+- (void)configureViewWithModel:(ModelLogoInfo *)logoInfo {
     
+    self.imageViewLogo.image = [UIImage imageNamed:logoInfo.imageName];
+    self.labelLogoName.text = logoInfo.logoName;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class ModelLogoInfo;
+
 static NSString * const kLogoTableViewCellIdentifier = @"LogoTableViewCellID";
 
 @interface LogoTableViewCell : UITableViewCell
 
-- (void)configureView;
+- (void)configureViewWithModel:(ModelLogoInfo *)logoInfo;
 
 @end
