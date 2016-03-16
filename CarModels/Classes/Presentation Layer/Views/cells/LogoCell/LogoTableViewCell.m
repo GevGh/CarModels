@@ -38,4 +38,17 @@
     // Configure the view for the selected state
 }
 
+- (void)cellInTableView:(UITableView *)tableView DidScrollOnView:(UIView *)view {
+    
+    CGRect rectInSuperview = [tableView convertRect:self.frame toView:view];
+    
+    float distanceFromCenter = view.frame.size.height/2 - CGRectGetMinY(rectInSuperview);
+    float difference = self.imageViewBackground.frame.size.height - self.frame.size.height;
+    float move = distanceFromCenter/ view.frame.size.height * difference;
+    
+    CGRect imageRect = self.imageViewBackground.frame;
+    imageRect.origin.y = -(difference/2) + move;
+    self.imageViewBackground.frame = imageRect;
+}
+
 @end

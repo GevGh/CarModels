@@ -33,7 +33,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test_background" translatesAutoresizingMaskIntoConstraints="NO" id="0pm-bW-g7P">
-                                                            <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
+                                                            <rect key="frame" x="0.0" y="-20" width="375" height="189.5"/>
                                                         </imageView>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bgD-JD-e4K" userLabel="View : alpha">
                                                             <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
@@ -67,8 +67,8 @@
                                                         <constraint firstItem="bgD-JD-e4K" firstAttribute="leading" secondItem="AnK-qm-PKK" secondAttribute="leading" id="MFI-uc-sWQ"/>
                                                         <constraint firstAttribute="bottom" secondItem="bgD-JD-e4K" secondAttribute="bottom" id="MOk-x7-RP8"/>
                                                         <constraint firstAttribute="trailing" secondItem="bgD-JD-e4K" secondAttribute="trailing" id="XbR-qf-cDd"/>
-                                                        <constraint firstItem="0pm-bW-g7P" firstAttribute="top" secondItem="AnK-qm-PKK" secondAttribute="top" id="c6C-j5-KVn"/>
-                                                        <constraint firstAttribute="bottom" secondItem="0pm-bW-g7P" secondAttribute="bottom" id="ueU-Gc-8d1"/>
+                                                        <constraint firstItem="0pm-bW-g7P" firstAttribute="top" secondItem="AnK-qm-PKK" secondAttribute="top" constant="-20" id="c6C-j5-KVn"/>
+                                                        <constraint firstAttribute="bottom" secondItem="0pm-bW-g7P" secondAttribute="bottom" constant="-20" id="ueU-Gc-8d1"/>
                                                         <constraint firstItem="bgD-JD-e4K" firstAttribute="top" secondItem="AnK-qm-PKK" secondAttribute="top" id="vpo-hz-4EA"/>
                                                         <constraint firstAttribute="trailing" secondItem="0pm-bW-g7P" secondAttribute="trailing" id="xi7-q5-PqA"/>
                                                     </constraints>

@@ -6,6 +6,7 @@
 target 'CarModels' do
 
 pod 'SDWebImage', '~>3.7'
+pod 'Firebase', '>= 2.5.0'
 
 end
 

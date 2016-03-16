@@ -34,6 +34,11 @@
     
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    
+    [self scrollViewDidScroll:self.tableViewMain];
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
     return self.arrayLogoModels.count;
@@ -47,6 +52,15 @@
     [cell configureViewWithModel:[self.arrayLogoModels objectAtIndex:indexPath.row]];
     
     return cell;
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
+    NSArray *cells = [self.tableViewMain visibleCells];
+    for (LogoTableViewCell *cell in cells) {
+        
+        [cell cellInTableView:self.tableViewMain DidScrollOnView:self.view];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

@@ -34,6 +34,7 @@
     ModelLogoInfo *modelBMW = [[ModelLogoInfo alloc] init];
     modelBMW.imageName = @"logo_BMW";
     modelBMW.logoName = @"BMW";
+    modelBMW.identifier = @"bk5AXKpA5h5Eld1_bmw";
     
     ModelLogoInfo *modelCadillac = [[ModelLogoInfo alloc] init];
     modelCadillac.imageName = @"logo_cadillac";
@@ -68,7 +69,7 @@
     modelLada.logoName = @"Lada";
     
     ModelLogoInfo *modelLamborgini = [[ModelLogoInfo alloc] init];
-    modelLamborgini.imageName = @"logo_l";
+    modelLamborgini.imageName = @"logo_lamborgini";
     modelLamborgini.logoName = @"Lamborgini";
     
     ModelLogoInfo *modelLincoln = [[ModelLogoInfo alloc] init];
@@ -82,6 +83,7 @@
     ModelLogoInfo *modelMercedesBenc = [[ModelLogoInfo alloc] init];
     modelMercedesBenc.imageName = @"logo_mercedes_benz";
     modelMercedesBenc.logoName = @"Mercedes Benc";
+    modelMercedesBenc.identifier = @"dcXYuuqu75cKeyY_mercedes";
     
     ModelLogoInfo *modelMitsubishi = [[ModelLogoInfo alloc] init];
     modelMitsubishi.imageName = @"logo_mitsubishi";

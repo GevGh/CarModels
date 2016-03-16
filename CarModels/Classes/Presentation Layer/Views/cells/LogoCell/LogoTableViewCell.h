@@ -16,4 +16,6 @@ static NSString * const kLogoTableViewCellIdentifier = @"LogoTableViewCellID";
 
 - (void)configureViewWithModel:(ModelLogoInfo *)logoInfo;
 
+- (void)cellInTableView:(UITableView *)tableView DidScrollOnView:(UIView *)view;
+
 @end
