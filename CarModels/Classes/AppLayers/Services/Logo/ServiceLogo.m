@@ -34,7 +34,12 @@
     ModelLogoInfo *modelBMW = [[ModelLogoInfo alloc] init];
     modelBMW.imageName = @"logo_BMW";
     modelBMW.logoName = @"BMW";
-    modelBMW.identifier = @"bk5AXKpA5h5Eld1_bmw";
+    modelBMW.identifier = @"bmw_bk5AXKpA5h5Eld1";
+    
+    ModelLogoInfo *modelBugatti = [[ModelLogoInfo alloc] init];
+    modelBugatti.imageName = @"logo_bugatti";
+    modelBugatti.logoName = @"Bugatti";
+    modelBugatti.identifier = @"bugatti_WmrGJuRXII3R96h";
     
     ModelLogoInfo *modelCadillac = [[ModelLogoInfo alloc] init];
     modelCadillac.imageName = @"logo_cadillac";
@@ -71,6 +76,15 @@
     ModelLogoInfo *modelLamborgini = [[ModelLogoInfo alloc] init];
     modelLamborgini.imageName = @"logo_lamborgini";
     modelLamborgini.logoName = @"Lamborgini";
+    
+    ModelLogoInfo *modelLandRover = [[ModelLogoInfo alloc] init];
+    modelLandRover.imageName = @"logo_LandRover";
+    modelLandRover.logoName = @"Land Rover";
+    modelLandRover.identifier = @"land_rover_7DrmpVJu4wDkr9k";
+
+    ModelLogoInfo *modelLexus = [[ModelLogoInfo alloc] init];
+    modelLexus.imageName = @"logo_lexus";
+    modelLexus.logoName = @"Lexus";
     
     ModelLogoInfo *modelLincoln = [[ModelLogoInfo alloc] init];
     modelLincoln.imageName = @"logo_Lincoln";
@@ -113,6 +127,10 @@
     modelSubaru.imageName = @"logo_subaru";
     modelSubaru.logoName = @"Subaru";
     
+    ModelLogoInfo *modelTesla = [[ModelLogoInfo alloc] init];
+    modelTesla.imageName = @"logo_tesla";
+    modelTesla.logoName = @"Tesla";
+    
     ModelLogoInfo *modelToyota = [[ModelLogoInfo alloc] init];
     modelToyota.imageName = @"logo_toyota";
     modelToyota.logoName = @"Toyota";
@@ -130,6 +148,7 @@
     [models addObject:modelAudi];
     [models addObject:modelBentley];
     [models addObject:modelBMW];
+    [models addObject:modelBugatti];
     [models addObject:modelCadillac];
     [models addObject:modelDodge];
     [models addObject:modelFerrari];
@@ -139,6 +158,8 @@
     [models addObject:modelInfiniti];
     [models addObject:modelLada];
     [models addObject:modelLamborgini];
+    [models addObject:modelLandRover];
+    [models addObject:modelLexus];
     [models addObject:modelLincoln];
     [models addObject:modelMazda];
     [models addObject:modelMercedesBenc];
@@ -149,6 +170,7 @@
     [models addObject:modelRollsRoyce];
     [models addObject:modelSkoda];
     [models addObject:modelSubaru];
+    [models addObject:modelTesla];
     [models addObject:modelToyota];
     [models addObject:modelVolkswagen];
     [models addObject:modelVolvo];    

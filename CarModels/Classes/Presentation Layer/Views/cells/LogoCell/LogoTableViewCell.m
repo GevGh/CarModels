@@ -32,12 +32,6 @@
     self.labelLogoName.text = logoInfo.logoName;
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
-}
-
 - (void)cellInTableView:(UITableView *)tableView DidScrollOnView:(UIView *)view {
     
     CGRect rectInSuperview = [tableView convertRect:self.frame toView:view];

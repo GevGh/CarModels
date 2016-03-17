@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import <Firebase/Firebase.h>
 
 @interface AppDelegate ()
 
@@ -18,11 +17,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
-    Firebase *myRootRef = [[Firebase alloc] initWithUrl:@"https://sizzling-fire-6856.firebaseio.com"];
-    // Write data to Firebase
-    [myRootRef setValue:@"Do you have data? You'll love Firebase."];
-    
     return YES;
 }
 

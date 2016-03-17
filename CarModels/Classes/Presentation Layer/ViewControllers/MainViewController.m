@@ -11,6 +11,8 @@
 #import "ModelLogoInfo.h"
 #import "LogoTableViewCell.h"
 
+#import "CategoryViewControllers.h"
+
 @interface MainViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableViewMain;
@@ -26,6 +28,10 @@
 - (void)viewDidLoad {
 
     [super viewDidLoad];
+    
+    self.navigationController.navigationBarHidden = NO;
+    self.navigationController.navigationBar.hidden = YES;
+    
     self.serviceLogo = [[ServiceLogo alloc] init];
     self.arrayLogoModels = [self.serviceLogo getAllLogoModels];
     
@@ -54,6 +60,12 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [self performSegueWithIdentifier:@"mainToCategory"
+                              sender:[self.arrayLogoModels objectAtIndex:indexPath.row]];
+}
+
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     
     NSArray *cells = [self.tableViewMain visibleCells];
@@ -63,9 +75,13 @@
     }
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
-    [super didReceiveMemoryWarning];
+    if ([segue.identifier isEqualToString:@"mainToCategory"]) {
+        
+        CategoryViewControllers *vc = (CategoryViewControllers *)segue.destinationViewController;
+        vc.modelInfo = sender;
+    }
 }
 
 @end
