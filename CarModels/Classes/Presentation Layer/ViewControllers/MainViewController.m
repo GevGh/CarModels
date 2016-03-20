@@ -70,7 +70,7 @@
     
     NSArray *cells = [self.tableViewMain visibleCells];
     for (LogoTableViewCell *cell in cells) {
-        
+    
         [cell cellInTableView:self.tableViewMain DidScrollOnView:self.view];
     }
 }

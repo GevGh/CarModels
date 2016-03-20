@@ -14,9 +14,11 @@
 		EF83F5CD1C86078300603204 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF83F5CC1C86078300603204 /* MainViewController.m */; };
 		EF83F5D01C86079100603204 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF83F5CF1C86079100603204 /* AppDelegate.m */; };
 		EF83F5D21C86079C00603204 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF83F5D11C86079C00603204 /* Assets.xcassets */; };
+		EFEA9A391C9F38B300F40CAD /* ServiceLogo.m in Sources */ = {isa = PBXBuildFile; fileRef = EFEA9A381C9F38B300F40CAD /* ServiceLogo.m */; };
+		EFEA9A3C1C9F38D900F40CAD /* ServiceAmazon.m in Sources */ = {isa = PBXBuildFile; fileRef = EFEA9A3B1C9F38D900F40CAD /* ServiceAmazon.m */; };
+		EFEA9A401C9F3F5000F40CAD /* ServiceImageDownloadingCaching.m in Sources */ = {isa = PBXBuildFile; fileRef = EFEA9A3F1C9F3F5000F40CAD /* ServiceImageDownloadingCaching.m */; };
 		EFEF6AAF1C8F509C0072FBE2 /* LogoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFEF6AAE1C8F509C0072FBE2 /* LogoTableViewCell.m */; };
 		EFEF6AB71C8F54300072FBE2 /* ModelLogoInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EFEF6AB61C8F54300072FBE2 /* ModelLogoInfo.m */; };
-		EFEF6ABF1C8F552A0072FBE2 /* ServiceLogo.m in Sources */ = {isa = PBXBuildFile; fileRef = EFEF6ABE1C8F552A0072FBE2 /* ServiceLogo.m */; };
 		EFFF6F6C1C9B214B00087FD8 /* CategoryViewControllers.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFF6F6B1C9B214B00087FD8 /* CategoryViewControllers.m */; };
 		EFFF6F701C9B350200087FD8 /* ServiceFireBase.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFF6F6F1C9B350200087FD8 /* ServiceFireBase.m */; };
 /* End PBXBuildFile section */
@@ -35,12 +37,17 @@
 		EF83F5CE1C86079100603204 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate/AppDelegate.h; sourceTree = "<group>"; };
 		EF83F5CF1C86079100603204 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Classes/AppDelegate/AppDelegate.m; sourceTree = "<group>"; };
 		EF83F5D11C86079C00603204 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Assets/Assets.xcassets; sourceTree = "<group>"; };
+		EFEA9A331C9F1CF100F40CAD /* Constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Constant.h; path = Classes/Helpers/Constant.h; sourceTree = "<group>"; };
+		EFEA9A371C9F38B300F40CAD /* ServiceLogo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServiceLogo.h; path = Classes/AppLayers/Services/Logo/ServiceLogo.h; sourceTree = "<group>"; };
+		EFEA9A381C9F38B300F40CAD /* ServiceLogo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServiceLogo.m; path = Classes/AppLayers/Services/Logo/ServiceLogo.m; sourceTree = "<group>"; };
+		EFEA9A3A1C9F38D900F40CAD /* ServiceAmazon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServiceAmazon.h; path = Classes/AppLayers/Services/AmazonService/ServiceAmazon.h; sourceTree = "<group>"; };
+		EFEA9A3B1C9F38D900F40CAD /* ServiceAmazon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServiceAmazon.m; path = Classes/AppLayers/Services/AmazonService/ServiceAmazon.m; sourceTree = "<group>"; };
+		EFEA9A3E1C9F3F5000F40CAD /* ServiceImageDownloadingCaching.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServiceImageDownloadingCaching.h; path = Classes/AppLayers/Services/ImageDownloadingCachingService/ServiceImageDownloadingCaching.h; sourceTree = "<group>"; };
+		EFEA9A3F1C9F3F5000F40CAD /* ServiceImageDownloadingCaching.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServiceImageDownloadingCaching.m; path = Classes/AppLayers/Services/ImageDownloadingCachingService/ServiceImageDownloadingCaching.m; sourceTree = "<group>"; };
 		EFEF6AAD1C8F509C0072FBE2 /* LogoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogoTableViewCell.h; path = "Classes/Presentation Layer/Views/cells/LogoCell/LogoTableViewCell.h"; sourceTree = "<group>"; };
 		EFEF6AAE1C8F509C0072FBE2 /* LogoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LogoTableViewCell.m; path = "Classes/Presentation Layer/Views/cells/LogoCell/LogoTableViewCell.m"; sourceTree = "<group>"; };
 		EFEF6AB51C8F54300072FBE2 /* ModelLogoInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ModelLogoInfo.h; path = Classes/Models/Logo/ModelLogoInfo.h; sourceTree = "<group>"; };
 		EFEF6AB61C8F54300072FBE2 /* ModelLogoInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ModelLogoInfo.m; path = Classes/Models/Logo/ModelLogoInfo.m; sourceTree = "<group>"; };
-		EFEF6ABD1C8F552A0072FBE2 /* ServiceLogo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServiceLogo.h; path = Classes/AppLayers/Services/Logo/ServiceLogo.h; sourceTree = "<group>"; };
-		EFEF6ABE1C8F552A0072FBE2 /* ServiceLogo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServiceLogo.m; path = Classes/AppLayers/Services/Logo/ServiceLogo.m; sourceTree = "<group>"; };
 		EFFF6F6A1C9B214B00087FD8 /* CategoryViewControllers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategoryViewControllers.h; path = "Classes/Presentation Layer/ViewControllers/CategoryViewControllers.h"; sourceTree = "<group>"; };
 		EFFF6F6B1C9B214B00087FD8 /* CategoryViewControllers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoryViewControllers.m; path = "Classes/Presentation Layer/ViewControllers/CategoryViewControllers.m"; sourceTree = "<group>"; };
 		EFFF6F6E1C9B350200087FD8 /* ServiceFireBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServiceFireBase.h; path = Classes/AppLayers/Services/FireBaseService/ServiceFireBase.h; sourceTree = "<group>"; };
@@ -108,6 +115,7 @@
 		EF83F5C51C8605D400603204 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				EFEA9A321C9F1CC400F40CAD /* Helpers */,
 				EFEF6AB81C8F54A80072FBE2 /* AppLayers */,
 				EFEF6AB01C8F53A30072FBE2 /* Models */,
 				EF83F5C71C8605FB00603204 /* Presentation Layer */,
@@ -160,6 +168,41 @@
 				EF83F5D11C86079C00603204 /* Assets.xcassets */,
 			);
 			name = Assets;
+			sourceTree = "<group>";
+		};
+		EFEA9A321C9F1CC400F40CAD /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				EFEA9A331C9F1CF100F40CAD /* Constant.h */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		EFEA9A351C9F386300F40CAD /* AmazonService */ = {
+			isa = PBXGroup;
+			children = (
+				EFEA9A3A1C9F38D900F40CAD /* ServiceAmazon.h */,
+				EFEA9A3B1C9F38D900F40CAD /* ServiceAmazon.m */,
+			);
+			name = AmazonService;
+			sourceTree = "<group>";
+		};
+		EFEA9A361C9F389700F40CAD /* Logo */ = {
+			isa = PBXGroup;
+			children = (
+				EFEA9A371C9F38B300F40CAD /* ServiceLogo.h */,
+				EFEA9A381C9F38B300F40CAD /* ServiceLogo.m */,
+			);
+			name = Logo;
+			sourceTree = "<group>";
+		};
+		EFEA9A3D1C9F3EF600F40CAD /* ImageDownloadingCachingService */ = {
+			isa = PBXGroup;
+			children = (
+				EFEA9A3E1C9F3F5000F40CAD /* ServiceImageDownloadingCaching.h */,
+				EFEA9A3F1C9F3F5000F40CAD /* ServiceImageDownloadingCaching.m */,
+			);
+			name = ImageDownloadingCachingService;
 			sourceTree = "<group>";
 		};
 		EFEF6AAA1C8F4FFD0072FBE2 /* Views */ = {
@@ -215,9 +258,10 @@
 		EFEF6AB91C8F54B50072FBE2 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				EFEA9A3D1C9F3EF600F40CAD /* ImageDownloadingCachingService */,
+				EFEA9A361C9F389700F40CAD /* Logo */,
+				EFEA9A351C9F386300F40CAD /* AmazonService */,
 				EFFF6F6D1C9B34B900087FD8 /* FireBaseService */,
-				EFEF6ABD1C8F552A0072FBE2 /* ServiceLogo.h */,
-				EFEF6ABE1C8F552A0072FBE2 /* ServiceLogo.m */,
 			);
 			name = Service;
 			sourceTree = "<group>";
@@ -362,11 +406,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFEA9A401C9F3F5000F40CAD /* ServiceImageDownloadingCaching.m in Sources */,
 				EF83F5CD1C86078300603204 /* MainViewController.m in Sources */,
 				EF5153DB1C85FFF1000CAA1C /* main.m in Sources */,
-				EFEF6ABF1C8F552A0072FBE2 /* ServiceLogo.m in Sources */,
+				EFEA9A391C9F38B300F40CAD /* ServiceLogo.m in Sources */,
 				EFEF6AAF1C8F509C0072FBE2 /* LogoTableViewCell.m in Sources */,
 				EFEF6AB71C8F54300072FBE2 /* ModelLogoInfo.m in Sources */,
+				EFEA9A3C1C9F38D900F40CAD /* ServiceAmazon.m in Sources */,
 				EFFF6F6C1C9B214B00087FD8 /* CategoryViewControllers.m in Sources */,
 				EFFF6F701C9B350200087FD8 /* ServiceFireBase.m in Sources */,
 				EF83F5D01C86079100603204 /* AppDelegate.m in Sources */,

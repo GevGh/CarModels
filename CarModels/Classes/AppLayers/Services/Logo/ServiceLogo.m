@@ -18,18 +18,22 @@
     ModelLogoInfo *modelAcura = [[ModelLogoInfo alloc] init];
     modelAcura.imageName = @"logo_acura";
     modelAcura.logoName = @"Acura";
+    modelAcura.identifier = @"acura_xiR9gRVS8C1oMW1";
     
     ModelLogoInfo *modelAstonMartin = [[ModelLogoInfo alloc] init];
     modelAstonMartin.imageName = @"logo_astonmartin";
     modelAstonMartin.logoName = @"Aston Martin";
+    modelAstonMartin.identifier = @"aston_martin_y9xG1HomNun5Hwn";
     
     ModelLogoInfo *modelAudi = [[ModelLogoInfo alloc] init];
     modelAudi.imageName = @"logo_audi";
     modelAudi.logoName = @"Audi";
+    modelAudi.identifier = @"audi_vgEPzRrHFo1zN9Y";
     
     ModelLogoInfo *modelBentley = [[ModelLogoInfo alloc] init];
     modelBentley.imageName = @"logo_bentley";
     modelBentley.logoName = @"Bentley";
+    modelBentley.identifier = @"bentley_CdFYT1VQvgPjQfn";
     
     ModelLogoInfo *modelBMW = [[ModelLogoInfo alloc] init];
     modelBMW.imageName = @"logo_BMW";
@@ -44,38 +48,47 @@
     ModelLogoInfo *modelCadillac = [[ModelLogoInfo alloc] init];
     modelCadillac.imageName = @"logo_cadillac";
     modelCadillac.logoName = @"Cadillac";
+    modelCadillac.identifier = @"cadillac_D6TpI8zZ3oLU2yt";
     
     ModelLogoInfo *modelDodge = [[ModelLogoInfo alloc] init];
     modelDodge.imageName = @"logo_dodge";
     modelDodge.logoName = @"Dodge";
+    modelDodge.identifier = @"dodge_OLJh7FkigBlGdrR";
     
     ModelLogoInfo *modelFerrari = [[ModelLogoInfo alloc] init];
     modelFerrari.imageName = @"logo_ferrari";
     modelFerrari.logoName = @"Ferrari";
+    modelFerrari.identifier = @"ferrari_zlVAUW8n0jC84qO";
     
     ModelLogoInfo *modelFord = [[ModelLogoInfo alloc] init];
     modelFord.imageName = @"logo_ford";
     modelFord.logoName = @"Ford";
+    modelFord.identifier = @"ford_Xu2s8LUUBvHBtZp";
     
     ModelLogoInfo *modelGreatWall = [[ModelLogoInfo alloc] init];
     modelGreatWall.imageName = @"logo_greatwall";
     modelGreatWall.logoName = @"Great Wall";
+    modelGreatWall.identifier = @"great_wall_2zCuZGstrKQMEiO";
     
     ModelLogoInfo *modelHonda = [[ModelLogoInfo alloc] init];
     modelHonda.imageName = @"logo_honda";
     modelHonda.logoName = @"Honda";
+    modelHonda.identifier = @"honda_hpdmTXco8NN3Df2";
     
     ModelLogoInfo *modelInfiniti = [[ModelLogoInfo alloc] init];
     modelInfiniti.imageName = @"logo_infiniti";
     modelInfiniti.logoName = @"Infiniti";
+    modelInfiniti.identifier = @"infiniti_1KTlawIqPGtc1jk";
     
     ModelLogoInfo *modelLada = [[ModelLogoInfo alloc] init];
     modelLada.imageName = @"logo_lada";
     modelLada.logoName = @"Lada";
+    modelLada.identifier = @"lada_XWvBY6pEOR5VXlY";
     
     ModelLogoInfo *modelLamborgini = [[ModelLogoInfo alloc] init];
     modelLamborgini.imageName = @"logo_lamborgini";
     modelLamborgini.logoName = @"Lamborgini";
+    modelLamborgini.identifier = @"lamborgini_CbzGIEqRlkh0uig";
     
     ModelLogoInfo *modelLandRover = [[ModelLogoInfo alloc] init];
     modelLandRover.imageName = @"logo_LandRover";
@@ -85,63 +98,77 @@
     ModelLogoInfo *modelLexus = [[ModelLogoInfo alloc] init];
     modelLexus.imageName = @"logo_lexus";
     modelLexus.logoName = @"Lexus";
+    modelLexus.identifier = @"lexus_nlREgAsVABMnJBq";
     
     ModelLogoInfo *modelLincoln = [[ModelLogoInfo alloc] init];
     modelLincoln.imageName = @"logo_Lincoln";
     modelLincoln.logoName = @"Lincoln";
+    modelLincoln.identifier = @"lincoln_WSfG4bnxQ2IWwTo";
     
     ModelLogoInfo *modelMazda = [[ModelLogoInfo alloc] init];
     modelMazda.imageName = @"logo_mazda";
     modelMazda.logoName = @"Mazda";
+    modelMazda.identifier = @"mazda_ZdJk69XSBkB1ghv";
     
     ModelLogoInfo *modelMercedesBenc = [[ModelLogoInfo alloc] init];
     modelMercedesBenc.imageName = @"logo_mercedes_benz";
     modelMercedesBenc.logoName = @"Mercedes Benc";
-    modelMercedesBenc.identifier = @"dcXYuuqu75cKeyY_mercedes";
+    modelMercedesBenc.identifier = @"mercedes_0rQ58MY8Uspa75F";
     
     ModelLogoInfo *modelMitsubishi = [[ModelLogoInfo alloc] init];
     modelMitsubishi.imageName = @"logo_mitsubishi";
     modelMitsubishi.logoName = @"Mitsubishi";
+    modelMitsubishi.identifier = @"mitsubishi_FpIHBNDrP9GAggQ";
     
     ModelLogoInfo *modelNissan = [[ModelLogoInfo alloc] init];
     modelNissan.imageName = @"logo_nissan";
     modelNissan.logoName = @"Nissan";
+    modelNissan.identifier = @"nissan_kgRW0dPj8dsTe0z";
     
     ModelLogoInfo *modelOpel = [[ModelLogoInfo alloc] init];
     modelOpel.imageName = @"logo_opel";
     modelOpel.logoName = @"Opel";
+    modelOpel.identifier = @"opel_YOO4Gh9XYBz6M0d";
     
     ModelLogoInfo *modelPorsche = [[ModelLogoInfo alloc] init];
     modelPorsche.imageName = @"logo_porsche";
     modelPorsche.logoName = @"Porsche";
+    modelPorsche.identifier = @"porsche_TzyhMcbwahAnWEL";
     
     ModelLogoInfo *modelRollsRoyce = [[ModelLogoInfo alloc] init];
     modelRollsRoyce.imageName = @"logo_Rolls-Royce";
     modelRollsRoyce.logoName = @"Rolls Royce";
+    modelRollsRoyce.identifier = @"rolls_royce_jtc9l6tGZy3NzXG";
     
     ModelLogoInfo *modelSkoda = [[ModelLogoInfo alloc] init];
     modelSkoda.imageName = @"logo_skoda";
     modelSkoda.logoName = @"Skoda";
+    modelSkoda.logoName = @"skoda_eqSn3QfJuaFMivk";
     
     ModelLogoInfo *modelSubaru = [[ModelLogoInfo alloc] init];
     modelSubaru.imageName = @"logo_subaru";
     modelSubaru.logoName = @"Subaru";
+    modelSubaru.identifier = @"subaru_bKQ4WBWXVD695QR";
     
     ModelLogoInfo *modelTesla = [[ModelLogoInfo alloc] init];
     modelTesla.imageName = @"logo_tesla";
     modelTesla.logoName = @"Tesla";
+    modelTesla.identifier = @"tesla_yGJ6EEuiGAhEu4U";
     
     ModelLogoInfo *modelToyota = [[ModelLogoInfo alloc] init];
     modelToyota.imageName = @"logo_toyota";
     modelToyota.logoName = @"Toyota";
+    modelToyota.identifier = @"toyota_LkGiggW0RoOQpNQ";
     
     ModelLogoInfo *modelVolkswagen = [[ModelLogoInfo alloc] init];
     modelVolkswagen.imageName = @"logo_volkswagen";
     modelVolkswagen.logoName = @"Volkswagen";
+    modelVolkswagen.identifier = @"volkswagen_TZnAdfVDcEs6JAJ";
     
     ModelLogoInfo *modelVolvo = [[ModelLogoInfo alloc] init];
     modelVolvo.imageName = @"logo_volvo";
     modelVolvo.logoName = @"Volvo";
+    modelVolvo.identifier = @"volvo_grpa8cHipyUxYyE";
     
     [models addObject:modelAcura];
     [models addObject:modelAstonMartin];

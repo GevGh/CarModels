@@ -8,6 +8,7 @@
 
 #import "LogoTableViewCell.h"
 #import "ModelLogoInfo.h"
+#import "ServiceImageDownloadingCaching.h"
 
 @interface LogoTableViewCell ()
 
@@ -15,6 +16,8 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageViewBackground;
 @property (weak, nonatomic) IBOutlet UIImageView *imageViewLogo;
 @property (weak, nonatomic) IBOutlet UILabel *labelLogoName;
+
+@property (strong, nonatomic) ServiceImageDownloadingCaching *serviceImageDownloading;
 
 @end
 
@@ -24,12 +27,40 @@
 
     [super awakeFromNib];
     self.viewMain.backgroundColor = [UIColor clearColor];
+    self.serviceImageDownloading = [[ServiceImageDownloadingCaching alloc] init];
+}
+
+- (void)prepareForReuse {
+    
+    self.imageViewBackground.image = nil;
 }
 
 - (void)configureViewWithModel:(ModelLogoInfo *)logoInfo {
     
     self.imageViewLogo.image = [UIImage imageNamed:logoInfo.imageName];
     self.labelLogoName.text = logoInfo.logoName;
+    [self.serviceImageDownloading getLogoBackgroungImageWithId:logoInfo.identifier
+                                                    completion:^(UIImage *image) {
+                                                        
+                                                        NSLog(@"%@    %@", logoInfo.logoName, image);
+                                                        
+                                                        // Decompress image
+                                                        if (image) {
+//                                                            UIGraphicsBeginImageContextWithOptions(image.size, NO, image.scale);
+//                                                            
+//                                                            [image drawAtPoint:CGPointZero];
+//                                                            
+//                                                            image = UIGraphicsGetImageFromCurrentImageContext();
+//                                                            
+//                                                            UIGraphicsEndImageContext();
+                                                            NSLog(@"%@2    %@", logoInfo.logoName, image);
+                                                            
+                                                            dispatch_async(dispatch_get_main_queue(), ^{
+                                                                
+                                                                self.imageViewBackground.image = image;
+                                                            });
+                                                        }
+                                                    }];
 }
 
 - (void)cellInTableView:(UITableView *)tableView DidScrollOnView:(UIView *)view {
