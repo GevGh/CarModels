@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15D21" minimumToolsVersion="Xcode 7.0">
+    <entity name="Category" representedClassName="CoreDataCategory" syncable="YES">
+        <attribute name="identifier" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imageURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="models" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Model" syncable="YES"/>
+    </entity>
+    <entity name="Company" representedClassName="CoreDataCompany" syncable="YES">
+        <attribute name="haveCategories" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="identifier" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="categories" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Category" syncable="YES"/>
+        <relationship name="models" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Model" syncable="YES"/>
+    </entity>
+    <entity name="Engine" representedClassName="CoreDataEngine" syncable="YES">
+        <attribute name="acceleration" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="caxs" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="co2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hoursePower" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="identifier" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="litr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="maxSpeed" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="qarshak" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="qash" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="torque" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="valve" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Model" representedClassName="CoreDataCarModel" syncable="YES">
+        <attribute name="identifier" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imagesURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="transsmisionType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="yearBegan" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="yearEnd" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="engines" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Engine" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Category" positionX="-63" positionY="-18" width="128" height="105"/>
+        <element name="Company" positionX="-54" positionY="-9" width="128" height="105"/>
+        <element name="Model" positionX="-36" positionY="9" width="128" height="150"/>
+        <element name="Engine" positionX="-18" positionY="27" width="128" height="240"/>
+    </elements>
+</model>

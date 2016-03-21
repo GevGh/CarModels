@@ -36,7 +36,7 @@
     modelBentley.identifier = @"bentley_CdFYT1VQvgPjQfn";
     
     ModelLogoInfo *modelBMW = [[ModelLogoInfo alloc] init];
-    modelBMW.imageName = @"logo_BMW";
+    modelBMW.imageName = @"logo_bmw";
     modelBMW.logoName = @"BMW";
     modelBMW.identifier = @"bmw_bk5AXKpA5h5Eld1";
     
@@ -49,6 +49,11 @@
     modelCadillac.imageName = @"logo_cadillac";
     modelCadillac.logoName = @"Cadillac";
     modelCadillac.identifier = @"cadillac_D6TpI8zZ3oLU2yt";
+    
+    ModelLogoInfo *modelChevrolet = [[ModelLogoInfo alloc] init];
+    modelChevrolet.imageName = @"logo_chevrolet";
+    modelChevrolet.logoName = @"Chevrolet";
+    modelChevrolet.identifier = @"chevrolet_tgWKJxVC6bDdXCi";
     
     ModelLogoInfo *modelDodge = [[ModelLogoInfo alloc] init];
     modelDodge.imageName = @"logo_dodge";
@@ -80,18 +85,23 @@
     modelInfiniti.logoName = @"Infiniti";
     modelInfiniti.identifier = @"infiniti_1KTlawIqPGtc1jk";
     
+    ModelLogoInfo *modelKia = [[ModelLogoInfo alloc] init];
+    modelKia.imageName = @"logo_kia";
+    modelKia.logoName = @"KIA";
+    modelKia.identifier = @"kia_A7xc1QHfkG5OmXe";
+    
     ModelLogoInfo *modelLada = [[ModelLogoInfo alloc] init];
     modelLada.imageName = @"logo_lada";
     modelLada.logoName = @"Lada";
     modelLada.identifier = @"lada_XWvBY6pEOR5VXlY";
     
-    ModelLogoInfo *modelLamborgini = [[ModelLogoInfo alloc] init];
-    modelLamborgini.imageName = @"logo_lamborgini";
-    modelLamborgini.logoName = @"Lamborgini";
-    modelLamborgini.identifier = @"lamborgini_CbzGIEqRlkh0uig";
+    ModelLogoInfo *modelLamborghini = [[ModelLogoInfo alloc] init];
+    modelLamborghini.imageName = @"logo_lamborghini";
+    modelLamborghini.logoName = @"Lamborghini";
+    modelLamborghini.identifier = @"lamborghini_CbzGIEqRlkh0uig";
     
     ModelLogoInfo *modelLandRover = [[ModelLogoInfo alloc] init];
-    modelLandRover.imageName = @"logo_LandRover";
+    modelLandRover.imageName = @"logo_land_rover";
     modelLandRover.logoName = @"Land Rover";
     modelLandRover.identifier = @"land_rover_7DrmpVJu4wDkr9k";
 
@@ -101,7 +111,7 @@
     modelLexus.identifier = @"lexus_nlREgAsVABMnJBq";
     
     ModelLogoInfo *modelLincoln = [[ModelLogoInfo alloc] init];
-    modelLincoln.imageName = @"logo_Lincoln";
+    modelLincoln.imageName = @"logo_lincoln";
     modelLincoln.logoName = @"Lincoln";
     modelLincoln.identifier = @"lincoln_WSfG4bnxQ2IWwTo";
     
@@ -111,7 +121,7 @@
     modelMazda.identifier = @"mazda_ZdJk69XSBkB1ghv";
     
     ModelLogoInfo *modelMercedesBenc = [[ModelLogoInfo alloc] init];
-    modelMercedesBenc.imageName = @"logo_mercedes_benz";
+    modelMercedesBenc.imageName = @"logo_mercedes-benz";
     modelMercedesBenc.logoName = @"Mercedes Benc";
     modelMercedesBenc.identifier = @"mercedes_0rQ58MY8Uspa75F";
     
@@ -136,14 +146,14 @@
     modelPorsche.identifier = @"porsche_TzyhMcbwahAnWEL";
     
     ModelLogoInfo *modelRollsRoyce = [[ModelLogoInfo alloc] init];
-    modelRollsRoyce.imageName = @"logo_Rolls-Royce";
+    modelRollsRoyce.imageName = @"logo_rolls-royce";
     modelRollsRoyce.logoName = @"Rolls Royce";
     modelRollsRoyce.identifier = @"rolls_royce_jtc9l6tGZy3NzXG";
     
     ModelLogoInfo *modelSkoda = [[ModelLogoInfo alloc] init];
     modelSkoda.imageName = @"logo_skoda";
     modelSkoda.logoName = @"Skoda";
-    modelSkoda.logoName = @"skoda_eqSn3QfJuaFMivk";
+    modelSkoda.identifier = @"skoda_eqSn3QfJuaFMivk";
     
     ModelLogoInfo *modelSubaru = [[ModelLogoInfo alloc] init];
     modelSubaru.imageName = @"logo_subaru";
@@ -161,7 +171,7 @@
     modelToyota.identifier = @"toyota_LkGiggW0RoOQpNQ";
     
     ModelLogoInfo *modelVolkswagen = [[ModelLogoInfo alloc] init];
-    modelVolkswagen.imageName = @"logo_volkswagen";
+    modelVolkswagen.imageName = @"logo_vw";
     modelVolkswagen.logoName = @"Volkswagen";
     modelVolkswagen.identifier = @"volkswagen_TZnAdfVDcEs6JAJ";
     
@@ -177,14 +187,16 @@
     [models addObject:modelBMW];
     [models addObject:modelBugatti];
     [models addObject:modelCadillac];
+    [models addObject:modelChevrolet];
     [models addObject:modelDodge];
     [models addObject:modelFerrari];
     [models addObject:modelFord];
     [models addObject:modelGreatWall];
     [models addObject:modelHonda];
     [models addObject:modelInfiniti];
+    [models addObject:modelKia];
     [models addObject:modelLada];
-    [models addObject:modelLamborgini];
+    [models addObject:modelLamborghini];
     [models addObject:modelLandRover];
     [models addObject:modelLexus];
     [models addObject:modelLincoln];
