@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		0CD83446529D7429B4D05852 /* libPods-CarModels.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BB1B3BF9EA4F3D75719E4156 /* libPods-CarModels.a */; };
+		EF2136941CA4830200731259 /* DAOCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2136931CA4830200731259 /* DAOCategory.m */; };
+		EF2136971CA4832B00731259 /* DAOModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2136961CA4832B00731259 /* DAOModel.m */; };
+		EF21369A1CA4835F00731259 /* DAOEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2136991CA4835F00731259 /* DAOEngine.m */; };
+		EF21369D1CA4839D00731259 /* DAOCompany.m in Sources */ = {isa = PBXBuildFile; fileRef = EF21369C1CA4839D00731259 /* DAOCompany.m */; };
+		EF2136A11CA486AB00731259 /* CoreDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2136A01CA486AB00731259 /* CoreDataController.m */; };
 		EF5153DB1C85FFF1000CAA1C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5153DA1C85FFF1000CAA1C /* main.m */; };
 		EF5153E41C85FFF1000CAA1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF5153E21C85FFF1000CAA1C /* Main.storyboard */; };
 		EF5153E91C85FFF1000CAA1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF5153E71C85FFF1000CAA1C /* LaunchScreen.storyboard */; };
@@ -24,6 +29,11 @@
 		EFEA9A401C9F3F5000F40CAD /* ServiceImageDownloadingCaching.m in Sources */ = {isa = PBXBuildFile; fileRef = EFEA9A3F1C9F3F5000F40CAD /* ServiceImageDownloadingCaching.m */; };
 		EFEF6AAF1C8F509C0072FBE2 /* LogoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFEF6AAE1C8F509C0072FBE2 /* LogoTableViewCell.m */; };
 		EFEF6AB71C8F54300072FBE2 /* ModelLogoInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EFEF6AB61C8F54300072FBE2 /* ModelLogoInfo.m */; };
+		EFF822831CA815AA00F9B8A6 /* CategoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF822821CA815AA00F9B8A6 /* CategoryTableViewCell.m */; };
+		EFF822871CA815E800F9B8A6 /* CarModelTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF822861CA815E800F9B8A6 /* CarModelTableViewCell.m */; };
+		EFF8228D1CA8165200F9B8A6 /* CarModelsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF8228C1CA8165200F9B8A6 /* CarModelsViewController.m */; };
+		EFFCA5541CA6C2C10054BBA0 /* ServiceCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFCA5531CA6C2C10054BBA0 /* ServiceCategory.m */; };
+		EFFCA5581CA6C31D0054BBA0 /* ServiceCompany.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFCA5571CA6C31D0054BBA0 /* ServiceCompany.m */; };
 		EFFF6F6C1C9B214B00087FD8 /* CategoryViewControllers.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFF6F6B1C9B214B00087FD8 /* CategoryViewControllers.m */; };
 		EFFF6F701C9B350200087FD8 /* ServiceFireBase.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFF6F6F1C9B350200087FD8 /* ServiceFireBase.m */; };
 /* End PBXBuildFile section */
@@ -32,6 +42,16 @@
 		478F6A86772BC24FE9C4C05A /* Pods-CarModels.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarModels.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CarModels/Pods-CarModels.debug.xcconfig"; sourceTree = "<group>"; };
 		54BF9956A8E48490EBFF4B6E /* Pods-CarModels.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarModels.release.xcconfig"; path = "Pods/Target Support Files/Pods-CarModels/Pods-CarModels.release.xcconfig"; sourceTree = "<group>"; };
 		BB1B3BF9EA4F3D75719E4156 /* libPods-CarModels.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CarModels.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF2136921CA4830200731259 /* DAOCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DAOCategory.h; path = Classes/AppLayers/DAO/DAOCategory.h; sourceTree = "<group>"; };
+		EF2136931CA4830200731259 /* DAOCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DAOCategory.m; path = Classes/AppLayers/DAO/DAOCategory.m; sourceTree = "<group>"; };
+		EF2136951CA4832B00731259 /* DAOModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DAOModel.h; path = Classes/AppLayers/DAO/DAOModel.h; sourceTree = "<group>"; };
+		EF2136961CA4832B00731259 /* DAOModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DAOModel.m; path = Classes/AppLayers/DAO/DAOModel.m; sourceTree = "<group>"; };
+		EF2136981CA4835F00731259 /* DAOEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DAOEngine.h; path = Classes/AppLayers/DAO/DAOEngine.h; sourceTree = "<group>"; };
+		EF2136991CA4835F00731259 /* DAOEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DAOEngine.m; path = Classes/AppLayers/DAO/DAOEngine.m; sourceTree = "<group>"; };
+		EF21369B1CA4839D00731259 /* DAOCompany.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DAOCompany.h; path = Classes/AppLayers/DAO/DAOCompany.h; sourceTree = "<group>"; };
+		EF21369C1CA4839D00731259 /* DAOCompany.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DAOCompany.m; path = Classes/AppLayers/DAO/DAOCompany.m; sourceTree = "<group>"; };
+		EF21369F1CA486AB00731259 /* CoreDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreDataController.h; path = Classes/AppLayers/DAO/CoreDataController.h; sourceTree = "<group>"; };
+		EF2136A01CA486AB00731259 /* CoreDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataController.m; path = Classes/AppLayers/DAO/CoreDataController.m; sourceTree = "<group>"; };
 		EF5153D61C85FFF1000CAA1C /* CarModels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarModels.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF5153DA1C85FFF1000CAA1C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EF5153E31C85FFF1000CAA1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -62,6 +82,16 @@
 		EFEF6AAE1C8F509C0072FBE2 /* LogoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LogoTableViewCell.m; path = "Classes/Presentation Layer/Views/cells/LogoCell/LogoTableViewCell.m"; sourceTree = "<group>"; };
 		EFEF6AB51C8F54300072FBE2 /* ModelLogoInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ModelLogoInfo.h; path = Classes/Models/Logo/ModelLogoInfo.h; sourceTree = "<group>"; };
 		EFEF6AB61C8F54300072FBE2 /* ModelLogoInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ModelLogoInfo.m; path = Classes/Models/Logo/ModelLogoInfo.m; sourceTree = "<group>"; };
+		EFF822811CA815AA00F9B8A6 /* CategoryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategoryTableViewCell.h; path = "Classes/Presentation Layer/Views/cells/CategoryCell/CategoryTableViewCell.h"; sourceTree = "<group>"; };
+		EFF822821CA815AA00F9B8A6 /* CategoryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoryTableViewCell.m; path = "Classes/Presentation Layer/Views/cells/CategoryCell/CategoryTableViewCell.m"; sourceTree = "<group>"; };
+		EFF822851CA815E800F9B8A6 /* CarModelTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CarModelTableViewCell.h; path = "Classes/Presentation Layer/Views/cells/CarModelCell/CarModelTableViewCell.h"; sourceTree = "<group>"; };
+		EFF822861CA815E800F9B8A6 /* CarModelTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CarModelTableViewCell.m; path = "Classes/Presentation Layer/Views/cells/CarModelCell/CarModelTableViewCell.m"; sourceTree = "<group>"; };
+		EFF8228B1CA8165200F9B8A6 /* CarModelsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CarModelsViewController.h; path = "Classes/Presentation Layer/ViewControllers/CarModels/CarModelsViewController.h"; sourceTree = "<group>"; };
+		EFF8228C1CA8165200F9B8A6 /* CarModelsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CarModelsViewController.m; path = "Classes/Presentation Layer/ViewControllers/CarModels/CarModelsViewController.m"; sourceTree = "<group>"; };
+		EFFCA5521CA6C2C10054BBA0 /* ServiceCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServiceCategory.h; path = Classes/AppLayers/Services/ServiceCategory/ServiceCategory.h; sourceTree = "<group>"; };
+		EFFCA5531CA6C2C10054BBA0 /* ServiceCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServiceCategory.m; path = Classes/AppLayers/Services/ServiceCategory/ServiceCategory.m; sourceTree = "<group>"; };
+		EFFCA5561CA6C31D0054BBA0 /* ServiceCompany.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServiceCompany.h; path = Classes/AppLayers/Services/ServiceCompany/ServiceCompany.h; sourceTree = "<group>"; };
+		EFFCA5571CA6C31D0054BBA0 /* ServiceCompany.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServiceCompany.m; path = Classes/AppLayers/Services/ServiceCompany/ServiceCompany.m; sourceTree = "<group>"; };
 		EFFF6F6A1C9B214B00087FD8 /* CategoryViewControllers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategoryViewControllers.h; path = "Classes/Presentation Layer/ViewControllers/CategoryViewControllers.h"; sourceTree = "<group>"; };
 		EFFF6F6B1C9B214B00087FD8 /* CategoryViewControllers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoryViewControllers.m; path = "Classes/Presentation Layer/ViewControllers/CategoryViewControllers.m"; sourceTree = "<group>"; };
 		EFFF6F6E1C9B350200087FD8 /* ServiceFireBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServiceFireBase.h; path = Classes/AppLayers/Services/FireBaseService/ServiceFireBase.h; sourceTree = "<group>"; };
@@ -86,6 +116,23 @@
 				BB1B3BF9EA4F3D75719E4156 /* libPods-CarModels.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EF2136911CA482A600731259 /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				EF2136921CA4830200731259 /* DAOCategory.h */,
+				EF2136931CA4830200731259 /* DAOCategory.m */,
+				EF2136951CA4832B00731259 /* DAOModel.h */,
+				EF2136961CA4832B00731259 /* DAOModel.m */,
+				EF2136981CA4835F00731259 /* DAOEngine.h */,
+				EF2136991CA4835F00731259 /* DAOEngine.m */,
+				EF21369B1CA4839D00731259 /* DAOCompany.h */,
+				EF21369C1CA4839D00731259 /* DAOCompany.m */,
+				EF21369F1CA486AB00731259 /* CoreDataController.h */,
+				EF2136A01CA486AB00731259 /* CoreDataController.m */,
+			);
+			name = DAO;
 			sourceTree = "<group>";
 		};
 		EF5153CD1C85FFF1000CAA1C = {
@@ -160,10 +207,9 @@
 		EF83F5C81C86060800603204 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				EF83F5CB1C86078300603204 /* MainViewController.h */,
-				EF83F5CC1C86078300603204 /* MainViewController.m */,
-				EFFF6F6A1C9B214B00087FD8 /* CategoryViewControllers.h */,
-				EFFF6F6B1C9B214B00087FD8 /* CategoryViewControllers.m */,
+				EFF8228A1CA8161400F9B8A6 /* Category */,
+				EFF822891CA8160E00F9B8A6 /* Main */,
+				EFF822881CA815FF00F9B8A6 /* CarModels */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -246,6 +292,8 @@
 		EFEF6AAB1C8F50070072FBE2 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				EFF822841CA815AE00F9B8A6 /* CarModelCell */,
+				EFF822801CA8156400F9B8A6 /* CategoryCell */,
 				EFEF6AAC1C8F50120072FBE2 /* LogoCell */,
 			);
 			name = Cells;
@@ -281,6 +329,7 @@
 		EFEF6AB81C8F54A80072FBE2 /* AppLayers */ = {
 			isa = PBXGroup;
 			children = (
+				EF2136911CA482A600731259 /* DAO */,
 				EFEF6AB91C8F54B50072FBE2 /* Service */,
 			);
 			name = AppLayers;
@@ -289,12 +338,77 @@
 		EFEF6AB91C8F54B50072FBE2 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				EFFCA5511CA6C2850054BBA0 /* ServiceCategory */,
+				EFFCA5501CA6C23F0054BBA0 /* ServiceCompany */,
 				EFEA9A3D1C9F3EF600F40CAD /* ImageDownloadingCachingService */,
 				EFEA9A361C9F389700F40CAD /* Logo */,
 				EFEA9A351C9F386300F40CAD /* AmazonService */,
 				EFFF6F6D1C9B34B900087FD8 /* FireBaseService */,
 			);
 			name = Service;
+			sourceTree = "<group>";
+		};
+		EFF822801CA8156400F9B8A6 /* CategoryCell */ = {
+			isa = PBXGroup;
+			children = (
+				EFF822811CA815AA00F9B8A6 /* CategoryTableViewCell.h */,
+				EFF822821CA815AA00F9B8A6 /* CategoryTableViewCell.m */,
+			);
+			name = CategoryCell;
+			sourceTree = "<group>";
+		};
+		EFF822841CA815AE00F9B8A6 /* CarModelCell */ = {
+			isa = PBXGroup;
+			children = (
+				EFF822851CA815E800F9B8A6 /* CarModelTableViewCell.h */,
+				EFF822861CA815E800F9B8A6 /* CarModelTableViewCell.m */,
+			);
+			name = CarModelCell;
+			sourceTree = "<group>";
+		};
+		EFF822881CA815FF00F9B8A6 /* CarModels */ = {
+			isa = PBXGroup;
+			children = (
+				EFF8228B1CA8165200F9B8A6 /* CarModelsViewController.h */,
+				EFF8228C1CA8165200F9B8A6 /* CarModelsViewController.m */,
+			);
+			name = CarModels;
+			sourceTree = "<group>";
+		};
+		EFF822891CA8160E00F9B8A6 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				EF83F5CB1C86078300603204 /* MainViewController.h */,
+				EF83F5CC1C86078300603204 /* MainViewController.m */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		EFF8228A1CA8161400F9B8A6 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				EFFF6F6A1C9B214B00087FD8 /* CategoryViewControllers.h */,
+				EFFF6F6B1C9B214B00087FD8 /* CategoryViewControllers.m */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
+		EFFCA5501CA6C23F0054BBA0 /* ServiceCompany */ = {
+			isa = PBXGroup;
+			children = (
+				EFFCA5561CA6C31D0054BBA0 /* ServiceCompany.h */,
+				EFFCA5571CA6C31D0054BBA0 /* ServiceCompany.m */,
+			);
+			name = ServiceCompany;
+			sourceTree = "<group>";
+		};
+		EFFCA5511CA6C2850054BBA0 /* ServiceCategory */ = {
+			isa = PBXGroup;
+			children = (
+				EFFCA5521CA6C2C10054BBA0 /* ServiceCategory.h */,
+				EFFCA5531CA6C2C10054BBA0 /* ServiceCategory.m */,
+			);
+			name = ServiceCategory;
 			sourceTree = "<group>";
 		};
 		EFFF6F6D1C9B34B900087FD8 /* FireBaseService */ = {
@@ -440,16 +554,26 @@
 				EFEA9A401C9F3F5000F40CAD /* ServiceImageDownloadingCaching.m in Sources */,
 				EF83F5CD1C86078300603204 /* MainViewController.m in Sources */,
 				EF93D2FE1CA057B50042C16D /* CoreDataCategory.m in Sources */,
+				EFFCA5581CA6C31D0054BBA0 /* ServiceCompany.m in Sources */,
 				EF5153DB1C85FFF1000CAA1C /* main.m in Sources */,
+				EFFCA5541CA6C2C10054BBA0 /* ServiceCategory.m in Sources */,
+				EF21369D1CA4839D00731259 /* DAOCompany.m in Sources */,
 				EFEA9A391C9F38B300F40CAD /* ServiceLogo.m in Sources */,
+				EF2136A11CA486AB00731259 /* CoreDataController.m in Sources */,
 				EFEF6AAF1C8F509C0072FBE2 /* LogoTableViewCell.m in Sources */,
 				EFEF6AB71C8F54300072FBE2 /* ModelLogoInfo.m in Sources */,
+				EF2136971CA4832B00731259 /* DAOModel.m in Sources */,
+				EFF822871CA815E800F9B8A6 /* CarModelTableViewCell.m in Sources */,
 				EF93D2FA1CA053CA0042C16D /* CoreDataCarModel.xcdatamodeld in Sources */,
+				EFF8228D1CA8165200F9B8A6 /* CarModelsViewController.m in Sources */,
 				EF93D3011CA057DA0042C16D /* CoreDataCompany.m in Sources */,
 				EFEA9A3C1C9F38D900F40CAD /* ServiceAmazon.m in Sources */,
+				EF2136941CA4830200731259 /* DAOCategory.m in Sources */,
 				EF93D3071CA058360042C16D /* CoreDataEngine.m in Sources */,
 				EFFF6F6C1C9B214B00087FD8 /* CategoryViewControllers.m in Sources */,
+				EF21369A1CA4835F00731259 /* DAOEngine.m in Sources */,
 				EFFF6F701C9B350200087FD8 /* ServiceFireBase.m in Sources */,
+				EFF822831CA815AA00F9B8A6 /* CategoryTableViewCell.m in Sources */,
 				EF83F5D01C86079100603204 /* AppDelegate.m in Sources */,
 				EF93D3041CA0581E0042C16D /* CoreDataCarModel.m in Sources */,
 			);

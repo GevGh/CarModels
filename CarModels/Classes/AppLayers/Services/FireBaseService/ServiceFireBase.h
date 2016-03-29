@@ -12,6 +12,6 @@
 
 @interface ServiceFireBase : NSObject
 
-- (void)loadCategoryForModel:(ModelLogoInfo *)logoInfo;
+- (void)loadCategoryForCompanyId:(NSString *)identifier withCompletion:(void(^)(id data))completion;
 
 @end

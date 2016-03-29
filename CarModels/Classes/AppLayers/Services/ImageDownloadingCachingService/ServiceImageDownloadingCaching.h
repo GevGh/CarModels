@@ -12,6 +12,11 @@
 
 @interface ServiceImageDownloadingCaching : NSObject
 
-- (void)getLogoBackgroungImageWithId:(NSString *)imageId completion:(void(^)(UIImage *image))completion;
+- (void)getLogoBackgroungImageWithId:(NSString *)imageId
+                          completion:(void(^)(UIImage *image))completion;
+
+- (void)getImageForBucket:(NSString *)bucket
+                  imageID:(NSString *)imageID
+               completion:(void(^)(UIImage *image))completion;
 
 @end

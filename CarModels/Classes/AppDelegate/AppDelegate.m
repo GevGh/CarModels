@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ServiceAmazon.h"
+#import "CoreDataController.h"
 
 @interface AppDelegate ()
 
@@ -21,6 +22,9 @@
     
     //setup amazon
     [ServiceAmazon setupAmazonConfigurations];
+    
+    //setup core data
+    [CoreDataController sharedInstance];
     
     return YES;
 }

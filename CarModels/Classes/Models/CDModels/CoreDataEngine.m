@@ -23,5 +23,23 @@
 @dynamic torque;
 @dynamic type;
 @dynamic valve;
+@dynamic abarot;
+
+- (void)configureWithData:(NSDictionary *)data {
+    
+    self.co2 = [data objectForKey:@"CO2"];
+    self.valve = [data objectForKey:@"valve"];
+    self.type = [data objectForKey:@"type"];
+    self.torque = [data objectForKey:@"torque"];
+    self.qash = [data objectForKey:@"qash"];
+    self.qarshak = [data objectForKey:@"rwd"];
+    self.name = [data objectForKey:@"name"];
+    self.maxSpeed = [data objectForKey:@"max_speed"];
+    self.litr = [data objectForKey:@"litr"];
+    self.hoursePower = [data objectForKey:@"hourspower"];
+    self.caxs = [data objectForKey:@"caxs"];
+    self.acceleration = [data objectForKey:@"acceleration"];
+    self.abarot = [data objectForKey:@"abarot"];
+}
 
 @end

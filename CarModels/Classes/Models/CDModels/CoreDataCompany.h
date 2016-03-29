@@ -14,9 +14,12 @@
 
 @property (strong, nonatomic) NSString *identifier;
 @property (strong, nonatomic) NSNumber *haveCategories;
+@property (strong, nonatomic) NSString *awsBucketName;
 
 @property (strong, nonatomic) NSSet *models;
 @property (strong, nonatomic) NSSet *categories;
+
+- (void)configureWithData:(NSDictionary *)data;
 
 @end
 

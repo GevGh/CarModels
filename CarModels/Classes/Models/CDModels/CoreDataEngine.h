@@ -23,5 +23,8 @@
 @property (strong, nonatomic) NSString *torque;
 @property (strong, nonatomic) NSString *type;
 @property (strong, nonatomic) NSString *valve;
+@property (strong, nonatomic) NSString *abarot;
+
+- (void)configureWithData:(NSDictionary *)data;
 
 @end

@@ -13,10 +13,12 @@
 @interface CoreDataCategory : NSManagedObject
 
 @property (strong, nonatomic) NSString *identifier;
-@property (strong, nonatomic) NSString *imageURL;
+@property (strong, nonatomic) NSString *imageId;
 @property (strong, nonatomic) NSString *name;
 
 @property (strong, nonatomic) NSSet *models;
+
+- (void)configureWithData:(NSDictionary *)data;
 
 @end
 

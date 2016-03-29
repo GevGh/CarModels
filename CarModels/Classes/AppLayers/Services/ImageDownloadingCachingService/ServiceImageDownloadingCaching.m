@@ -82,6 +82,51 @@ static NSMutableSet *downloadingProcces;
     });
 }
 
+- (void)getImageForBucket:(NSString *)bucket
+                  imageID:(NSString *)imageID
+               completion:(void(^)(UIImage *image))completion {
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+        
+        NSString *folderPath = [self getCompanyImagePathWithId:bucket];
+        NSString *path = [folderPath stringByAppendingPathComponent:imageID];
+        BOOL fileExists = [[NSFileManager defaultManager] fileExistsAtPath:path];
+        if (fileExists) {
+            
+            completion([UIImage imageWithContentsOfFile:path]);
+            return;
+        } else {
+            
+            if ([self.downloadingProcces containsObject:path]) {
+                
+                NSLog(@"WARNING ::: already downloading");
+                return;
+            }
+            
+            [self.downloadingProcces addObject:path];
+            
+            [self.serviceAmazon downloadAWSPhotoWithBucketName:bucket
+                                                     imageName:imageID
+                                                        toPath:path
+                                                    completion:^(NSError *error) {
+                                                        
+                                                        [self.downloadingProcces removeObject:path];
+                                                        
+                                                        if (error) {
+                                                            
+                                                            completion(nil);
+                                                        } else {
+                                                            
+                                                            //change saved image
+                                                            [self rewriteImageFromPath:path];
+                                                            completion([UIImage imageWithContentsOfFile:path]);
+                                                        }
+                                                    }];
+        }
+    });
+
+}
+
 - (void)rewriteImageFromPath:(NSString *)path {
     
     UIImage *image = [UIImage imageWithContentsOfFile:path];
@@ -106,6 +151,19 @@ static NSMutableSet *downloadingProcces;
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0]; // Get documents folder
     NSString *dataPath = [documentsDirectory stringByAppendingPathComponent:@"/LogoBackground"];
+    
+    if (![[NSFileManager defaultManager] fileExistsAtPath:dataPath])
+        [[NSFileManager defaultManager] createDirectoryAtPath:dataPath withIntermediateDirectories:NO attributes:nil error:&error]; //Create folder
+    
+    return dataPath;
+}
+
+- (NSString *)getCompanyImagePathWithId:(NSString *)identifier {
+    
+    NSError *error;
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0]; // Get documents folder
+    NSString *dataPath = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"/images/%@", identifier]];
     
     if (![[NSFileManager defaultManager] fileExistsAtPath:dataPath])
         [[NSFileManager defaultManager] createDirectoryAtPath:dataPath withIntermediateDirectories:NO attributes:nil error:&error]; //Create folder

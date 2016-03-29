@@ -13,13 +13,15 @@
 @interface CoreDataCarModel : NSManagedObject
 
 @property (strong, nonatomic) NSString *identifier;
-@property (strong, nonatomic) NSString *imageURL;
+@property (strong, nonatomic) NSArray *imageIds;
 @property (strong, nonatomic) NSString *name;
-@property (strong, nonatomic) NSString *transsmisionType;
+@property (strong, nonatomic) NSArray *transsmisions;
 @property (strong, nonatomic) NSString *yearBegan;
 @property (strong, nonatomic) NSString *yearEnd;
 
 @property (strong, nonatomic) NSSet *engines;
+
+- (void)configureWithData:(NSDictionary *)data;
 
 @end
 

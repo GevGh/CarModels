@@ -38,24 +38,24 @@ static NSString *const kFireBaseUrl = @"https://sizzling-fire-6856.firebaseio.co
     return _fireBaseRoot;
 }
 
-- (void)loadCategoryForModel:(ModelLogoInfo *)logoInfo {
+- (void)loadCategoryForCompanyId:(NSString *)identifier withCompletion:(void(^)(id data))completion {
     
-    if (!logoInfo.identifier) {
+    if (!identifier) {
         
+        completion(nil);
         return;
     }
     
-    NSString *appendingPath = [NSString stringWithFormat:@"%@/cars/%@", kFireBaseUrl, logoInfo.identifier];
+    NSString *appendingPath = [NSString stringWithFormat:@"%@/cars/%@", kFireBaseUrl, identifier];
     
     NSLog(@"path %@", appendingPath);
     Firebase *firebase = [[Firebase alloc] initWithUrl:appendingPath];
 
-//    [self.fireBaseRoot childByAppendingPath:appendingPath];
     NSLog(@"fireBase %@", firebase);
     [firebase observeSingleEventOfType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
         
         NSLog(@"%@", snapshot.value);
-        // do some stuff once
+        completion(snapshot.value);
     }];
 }
 
