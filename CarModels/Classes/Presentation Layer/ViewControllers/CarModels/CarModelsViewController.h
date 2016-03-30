@@ -14,4 +14,6 @@
 
 @property (strong, nonatomic) NSArray *modelsData;
 @property (strong, nonatomic) NSString *awsBucketName;
+@property (strong, nonatomic) NSString *navTitle;
+
 @end

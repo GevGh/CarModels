@@ -40,6 +40,7 @@
     self.caxs = [data objectForKey:@"caxs"];
     self.acceleration = [data objectForKey:@"acceleration"];
     self.abarot = [data objectForKey:@"abarot"];
+    self.qarshak = [data objectForKey:@"qarshak"];
 }
 
 @end

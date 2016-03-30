@@ -8,6 +8,7 @@
 
 #import "CarModelsViewController.h"
 #import "CarModelTableViewCell.h"
+#import "CurrentModelViewController.h"
 
 @interface CarModelsViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -27,6 +28,8 @@
 - (void)setupUI {
     
 //    self.imageViewLogo.image = [UIImage imageNamed:self.modelInfo.imageName];
+    
+    self.labelNavTitle.text = self.navTitle;
     
     self.tableViewMain.delegate = self;
     self.tableViewMain.dataSource = self;
@@ -58,15 +61,23 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [self performSegueWithIdentifier:@"modelsToCurrentModel" sender:self.modelsData[indexPath.row]];
+}
 
-/*
+
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    
+    if ([segue.identifier isEqualToString:@"modelsToCurrentModel"]) {
+        
+        CurrentModelViewController *modelVC = (CurrentModelViewController *)segue.destinationViewController;
+        CoreDataCarModel *model = sender;
+        modelVC.carModel = model;
+        modelVC.bucketName = self.awsBucketName;
+    }
 }
-*/
 
 @end

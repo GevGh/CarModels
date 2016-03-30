@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageViewBackground;
 @property (weak, nonatomic) IBOutlet UIView *viewAlpha;
 @property (weak, nonatomic) IBOutlet UILabel *labelName;
+@property (weak, nonatomic) IBOutlet UILabel *labelYear;
 
 @property (strong, nonatomic) ServiceImageDownloadingCaching *serviceImageDownloading;
 
@@ -24,17 +25,24 @@
 @implementation CarModelTableViewCell
 
 - (void)awakeFromNib {
+    
     [super awakeFromNib];
     self.serviceImageDownloading = [[ServiceImageDownloadingCaching alloc] init];
+}
+
+- (void)prepareForReuse {
+    
+    [super prepareForReuse];
+    self.imageViewBackground.image = nil;
 }
 
 - (void)configureWithCarModel:(CoreDataCarModel *)model
                    bucketName:(NSString *)bucketName {
     
     self.labelName.text = model.name;
+    self.labelYear.text = [NSString stringWithFormat:@"%@ - %@", model.yearBegan, model.yearEnd];
     
     NSArray *imageURLs = model.imageIds;
-    
     NSString *firstUrl = imageURLs.firstObject;
     
     [self.serviceImageDownloading getImageForBucket:bucketName

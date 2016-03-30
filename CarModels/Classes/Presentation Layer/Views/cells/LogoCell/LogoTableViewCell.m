@@ -43,18 +43,10 @@
     [self.serviceImageDownloading getLogoBackgroungImageWithId:logoInfo.identifier
                                                     completion:^(UIImage *image) {
                                                         
-                                                        NSLog(@"%@    %@", logoInfo.logoName, image);
+                                                        NSLog(@"%@", image);
                                                         
                                                         // Decompress image
                                                         if (image) {
-//                                                            UIGraphicsBeginImageContextWithOptions(image.size, NO, image.scale);
-//                                                            
-//                                                            [image drawAtPoint:CGPointZero];
-//                                                            
-//                                                            image = UIGraphicsGetImageFromCurrentImageContext();
-//                                                            
-//                                                            UIGraphicsEndImageContext();
-                                                            NSLog(@"%@2    %@", logoInfo.logoName, image);
                                                             
                                                             dispatch_async(dispatch_get_main_queue(), ^{
                                                                 

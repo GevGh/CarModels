@@ -132,6 +132,7 @@
         CoreDataCategory *category = sender;
         modelVC.modelsData = category.models.allObjects;
         modelVC.awsBucketName = self.awsBucketName;
+        modelVC.navTitle = category.name;
     }
 }
 

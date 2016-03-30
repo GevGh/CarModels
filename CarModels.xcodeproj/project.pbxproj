@@ -24,6 +24,10 @@
 		EF93D3011CA057DA0042C16D /* CoreDataCompany.m in Sources */ = {isa = PBXBuildFile; fileRef = EF93D3001CA057DA0042C16D /* CoreDataCompany.m */; };
 		EF93D3041CA0581E0042C16D /* CoreDataCarModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EF93D3031CA0581E0042C16D /* CoreDataCarModel.m */; };
 		EF93D3071CA058360042C16D /* CoreDataEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = EF93D3061CA058360042C16D /* CoreDataEngine.m */; };
+		EFDAE0F21CAB0C6A00580889 /* CurrentModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDAE0F11CAB0C6A00580889 /* CurrentModelViewController.m */; };
+		EFDAE0F61CAB0EF000580889 /* CurrentModelImageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDAE0F51CAB0EF000580889 /* CurrentModelImageCollectionViewCell.m */; };
+		EFDAE0FA1CAB255600580889 /* EngineCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDAE0F91CAB255600580889 /* EngineCollectionViewCell.m */; };
+		EFDAE0FE1CAB2F3600580889 /* EngineInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDAE0FD1CAB2F3600580889 /* EngineInfoTableViewCell.m */; };
 		EFEA9A391C9F38B300F40CAD /* ServiceLogo.m in Sources */ = {isa = PBXBuildFile; fileRef = EFEA9A381C9F38B300F40CAD /* ServiceLogo.m */; };
 		EFEA9A3C1C9F38D900F40CAD /* ServiceAmazon.m in Sources */ = {isa = PBXBuildFile; fileRef = EFEA9A3B1C9F38D900F40CAD /* ServiceAmazon.m */; };
 		EFEA9A401C9F3F5000F40CAD /* ServiceImageDownloadingCaching.m in Sources */ = {isa = PBXBuildFile; fileRef = EFEA9A3F1C9F3F5000F40CAD /* ServiceImageDownloadingCaching.m */; };
@@ -71,6 +75,14 @@
 		EF93D3031CA0581E0042C16D /* CoreDataCarModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataCarModel.m; path = Classes/Models/CDModels/CoreDataCarModel.m; sourceTree = "<group>"; };
 		EF93D3051CA058360042C16D /* CoreDataEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreDataEngine.h; path = Classes/Models/CDModels/CoreDataEngine.h; sourceTree = "<group>"; };
 		EF93D3061CA058360042C16D /* CoreDataEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataEngine.m; path = Classes/Models/CDModels/CoreDataEngine.m; sourceTree = "<group>"; };
+		EFDAE0F01CAB0C6A00580889 /* CurrentModelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CurrentModelViewController.h; path = "Classes/Presentation Layer/ViewControllers/CurrentModel/CurrentModelViewController.h"; sourceTree = "<group>"; };
+		EFDAE0F11CAB0C6A00580889 /* CurrentModelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CurrentModelViewController.m; path = "Classes/Presentation Layer/ViewControllers/CurrentModel/CurrentModelViewController.m"; sourceTree = "<group>"; };
+		EFDAE0F41CAB0EF000580889 /* CurrentModelImageCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CurrentModelImageCollectionViewCell.h; path = "Classes/Presentation Layer/Views/cells/CurrentModelImageCell/CurrentModelImageCollectionViewCell.h"; sourceTree = "<group>"; };
+		EFDAE0F51CAB0EF000580889 /* CurrentModelImageCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CurrentModelImageCollectionViewCell.m; path = "Classes/Presentation Layer/Views/cells/CurrentModelImageCell/CurrentModelImageCollectionViewCell.m"; sourceTree = "<group>"; };
+		EFDAE0F81CAB255600580889 /* EngineCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EngineCollectionViewCell.h; path = "Classes/Presentation Layer/Views/cells/EngineCollectionViewCell/EngineCollectionViewCell.h"; sourceTree = "<group>"; };
+		EFDAE0F91CAB255600580889 /* EngineCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EngineCollectionViewCell.m; path = "Classes/Presentation Layer/Views/cells/EngineCollectionViewCell/EngineCollectionViewCell.m"; sourceTree = "<group>"; };
+		EFDAE0FC1CAB2F3600580889 /* EngineInfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EngineInfoTableViewCell.h; path = "Classes/Presentation Layer/Views/cells/EngineInfoTableViewCell/EngineInfoTableViewCell.h"; sourceTree = "<group>"; };
+		EFDAE0FD1CAB2F3600580889 /* EngineInfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EngineInfoTableViewCell.m; path = "Classes/Presentation Layer/Views/cells/EngineInfoTableViewCell/EngineInfoTableViewCell.m"; sourceTree = "<group>"; };
 		EFEA9A331C9F1CF100F40CAD /* Constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Constant.h; path = Classes/Helpers/Constant.h; sourceTree = "<group>"; };
 		EFEA9A371C9F38B300F40CAD /* ServiceLogo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServiceLogo.h; path = Classes/AppLayers/Services/Logo/ServiceLogo.h; sourceTree = "<group>"; };
 		EFEA9A381C9F38B300F40CAD /* ServiceLogo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServiceLogo.m; path = Classes/AppLayers/Services/Logo/ServiceLogo.m; sourceTree = "<group>"; };
@@ -207,6 +219,7 @@
 		EF83F5C81C86060800603204 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				EFDAE0EF1CAB0C3300580889 /* CurrentModel */,
 				EFF8228A1CA8161400F9B8A6 /* Category */,
 				EFF822891CA8160E00F9B8A6 /* Main */,
 				EFF822881CA815FF00F9B8A6 /* CarModels */,
@@ -244,6 +257,42 @@
 				EF93D3061CA058360042C16D /* CoreDataEngine.m */,
 			);
 			name = CDModels;
+			sourceTree = "<group>";
+		};
+		EFDAE0EF1CAB0C3300580889 /* CurrentModel */ = {
+			isa = PBXGroup;
+			children = (
+				EFDAE0F01CAB0C6A00580889 /* CurrentModelViewController.h */,
+				EFDAE0F11CAB0C6A00580889 /* CurrentModelViewController.m */,
+			);
+			name = CurrentModel;
+			sourceTree = "<group>";
+		};
+		EFDAE0F31CAB0E8A00580889 /* CurrentModelImageCell */ = {
+			isa = PBXGroup;
+			children = (
+				EFDAE0F41CAB0EF000580889 /* CurrentModelImageCollectionViewCell.h */,
+				EFDAE0F51CAB0EF000580889 /* CurrentModelImageCollectionViewCell.m */,
+			);
+			name = CurrentModelImageCell;
+			sourceTree = "<group>";
+		};
+		EFDAE0F71CAB251E00580889 /* EngineCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				EFDAE0F81CAB255600580889 /* EngineCollectionViewCell.h */,
+				EFDAE0F91CAB255600580889 /* EngineCollectionViewCell.m */,
+			);
+			name = EngineCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		EFDAE0FB1CAB2E4C00580889 /* EngineInfoTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				EFDAE0FC1CAB2F3600580889 /* EngineInfoTableViewCell.h */,
+				EFDAE0FD1CAB2F3600580889 /* EngineInfoTableViewCell.m */,
+			);
+			name = EngineInfoTableViewCell;
 			sourceTree = "<group>";
 		};
 		EFEA9A321C9F1CC400F40CAD /* Helpers */ = {
@@ -292,6 +341,9 @@
 		EFEF6AAB1C8F50070072FBE2 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				EFDAE0FB1CAB2E4C00580889 /* EngineInfoTableViewCell */,
+				EFDAE0F71CAB251E00580889 /* EngineCollectionViewCell */,
+				EFDAE0F31CAB0E8A00580889 /* CurrentModelImageCell */,
 				EFF822841CA815AE00F9B8A6 /* CarModelCell */,
 				EFF822801CA8156400F9B8A6 /* CategoryCell */,
 				EFEF6AAC1C8F50120072FBE2 /* LogoCell */,
@@ -555,6 +607,8 @@
 				EF83F5CD1C86078300603204 /* MainViewController.m in Sources */,
 				EF93D2FE1CA057B50042C16D /* CoreDataCategory.m in Sources */,
 				EFFCA5581CA6C31D0054BBA0 /* ServiceCompany.m in Sources */,
+				EFDAE0F21CAB0C6A00580889 /* CurrentModelViewController.m in Sources */,
+				EFDAE0F61CAB0EF000580889 /* CurrentModelImageCollectionViewCell.m in Sources */,
 				EF5153DB1C85FFF1000CAA1C /* main.m in Sources */,
 				EFFCA5541CA6C2C10054BBA0 /* ServiceCategory.m in Sources */,
 				EF21369D1CA4839D00731259 /* DAOCompany.m in Sources */,
@@ -565,12 +619,14 @@
 				EF2136971CA4832B00731259 /* DAOModel.m in Sources */,
 				EFF822871CA815E800F9B8A6 /* CarModelTableViewCell.m in Sources */,
 				EF93D2FA1CA053CA0042C16D /* CoreDataCarModel.xcdatamodeld in Sources */,
+				EFDAE0FE1CAB2F3600580889 /* EngineInfoTableViewCell.m in Sources */,
 				EFF8228D1CA8165200F9B8A6 /* CarModelsViewController.m in Sources */,
 				EF93D3011CA057DA0042C16D /* CoreDataCompany.m in Sources */,
 				EFEA9A3C1C9F38D900F40CAD /* ServiceAmazon.m in Sources */,
 				EF2136941CA4830200731259 /* DAOCategory.m in Sources */,
 				EF93D3071CA058360042C16D /* CoreDataEngine.m in Sources */,
 				EFFF6F6C1C9B214B00087FD8 /* CategoryViewControllers.m in Sources */,
+				EFDAE0FA1CAB255600580889 /* EngineCollectionViewCell.m in Sources */,
 				EF21369A1CA4835F00731259 /* DAOEngine.m in Sources */,
 				EFFF6F701C9B350200087FD8 /* ServiceFireBase.m in Sources */,
 				EFF822831CA815AA00F9B8A6 /* CategoryTableViewCell.m in Sources */,

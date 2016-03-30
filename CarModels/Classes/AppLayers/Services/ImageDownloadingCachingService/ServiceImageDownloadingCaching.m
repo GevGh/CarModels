@@ -88,7 +88,7 @@ static NSMutableSet *downloadingProcces;
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
         
-        NSString *folderPath = [self getCompanyImagePathWithId:bucket];
+        NSString *folderPath = [self getCompanyImagePathWithBucketName:bucket];
         NSString *path = [folderPath stringByAppendingPathComponent:imageID];
         BOOL fileExists = [[NSFileManager defaultManager] fileExistsAtPath:path];
         if (fileExists) {
@@ -158,17 +158,23 @@ static NSMutableSet *downloadingProcces;
     return dataPath;
 }
 
-- (NSString *)getCompanyImagePathWithId:(NSString *)identifier {
+- (NSString *)getCompanyImagePathWithBucketName:(NSString *)bucketName {
     
     NSError *error;
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0]; // Get documents folder
-    NSString *dataPath = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"/images/%@", identifier]];
+    NSString *folderPath = [documentsDirectory stringByAppendingPathComponent:@"/images"];
     
-    if (![[NSFileManager defaultManager] fileExistsAtPath:dataPath])
-        [[NSFileManager defaultManager] createDirectoryAtPath:dataPath withIntermediateDirectories:NO attributes:nil error:&error]; //Create folder
+    if (![[NSFileManager defaultManager] fileExistsAtPath:folderPath])
+        [[NSFileManager defaultManager] createDirectoryAtPath:folderPath withIntermediateDirectories:NO attributes:nil error:&error]; //Create folder
     
-    return dataPath;
+    
+    NSString *bucketFolderPath = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"/%@", bucketName]];
+    
+    if (![[NSFileManager defaultManager] fileExistsAtPath:bucketFolderPath])
+        [[NSFileManager defaultManager] createDirectoryAtPath:bucketFolderPath withIntermediateDirectories:NO attributes:nil error:&error]; //Create folder
+    
+    return bucketFolderPath;
 }
 
 @end

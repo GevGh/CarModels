@@ -191,7 +191,7 @@
     [models addObject:modelDodge];
     [models addObject:modelFerrari];
     [models addObject:modelFord];
-    [models addObject:modelGreatWall];
+//    [models addObject:modelGreatWall];
     [models addObject:modelHonda];
     [models addObject:modelInfiniti];
     [models addObject:modelKia];
