@@ -18,6 +18,7 @@
 @property (strong, nonatomic) NSArray *transsmisions;
 @property (strong, nonatomic) NSString *yearBegan;
 @property (strong, nonatomic) NSString *yearEnd;
+@property (strong, nonatomic) NSNumber *order;
 
 @property (strong, nonatomic) NSSet *engines;
 

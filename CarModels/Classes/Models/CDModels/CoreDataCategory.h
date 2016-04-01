@@ -15,6 +15,7 @@
 @property (strong, nonatomic) NSString *identifier;
 @property (strong, nonatomic) NSString *imageId;
 @property (strong, nonatomic) NSString *name;
+@property (strong, nonatomic) NSNumber *order;
 
 @property (strong, nonatomic) NSSet *models;
 

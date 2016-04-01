@@ -16,6 +16,7 @@
 @dynamic imageId;
 @dynamic name;
 @dynamic models;
+@dynamic order;
 
 - (void)configureWithData:(NSDictionary *)data {
     
@@ -23,6 +24,7 @@
     
     self.imageId = [data objectForKey:@"image"];
     self.name = [data objectForKey:@"name"];
+    self.order = [data objectForKey:@"order"];
     
     if ([data objectForKey:@"models"]) {
         

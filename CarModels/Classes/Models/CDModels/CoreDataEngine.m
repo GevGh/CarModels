@@ -24,6 +24,7 @@
 @dynamic type;
 @dynamic valve;
 @dynamic abarot;
+@dynamic order;
 
 - (void)configureWithData:(NSDictionary *)data {
     
@@ -41,6 +42,7 @@
     self.acceleration = [data objectForKey:@"acceleration"];
     self.abarot = [data objectForKey:@"abarot"];
     self.qarshak = [data objectForKey:@"qarshak"];
+    self.order = [data objectForKey:@"order"];
 }
 
 @end

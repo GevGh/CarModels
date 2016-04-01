@@ -25,21 +25,21 @@
     
     [super awakeFromNib];
     
-    self.tableViewEngineInfo.delegate = self;
     self.tableViewEngineInfo.dataSource = self;
     
     self.keysData = @[@"",
                       @"RPM",
                       @"Acceleration",
-                      @"caxs",
+                      @"Caxs",
                       @"CO2",
                       @"HP",
-                      @"litr",
+                      @"Litr",
                       @"Max Speed",
                       @"qarshak",
                       @"Torque",
                       @"Type",
-                      @"Valve"];
+                      @"Valve",
+                      @"Qash"];
 }
 
 - (void)configureWithEngine:(CoreDataEngine *)engine {
@@ -57,14 +57,18 @@
     [tmpArray addObject:engine.torque ? engine.torque : @""];
     [tmpArray addObject:engine.type ? engine.type : @""];
     [tmpArray addObject:engine.valve ? engine.valve : @""];
+    [tmpArray addObject:engine.qash ? engine.qash : @""];
     
     self.engineData = [NSArray arrayWithArray:tmpArray];
     [self.tableViewEngineInfo reloadData];
+    [self.tableViewEngineInfo scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]
+                                    atScrollPosition:UITableViewScrollPositionTop
+                                            animated:NO];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return 12;
+    return 13;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

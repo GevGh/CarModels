@@ -19,6 +19,7 @@
 @dynamic yearBegan;
 @dynamic yearEnd;
 @dynamic engines;
+@dynamic order;
 
 - (void)configureWithData:(NSDictionary *)data {
     
@@ -26,6 +27,7 @@
     self.imageIds = [data objectForKey:@"images"];
     self.yearBegan = [data objectForKey:@"year_began"];
     self.yearEnd = [data objectForKey:@"year_end"];
+    self.order = [data objectForKey:@"order"];
     self.transsmisions = [data objectForKey:@"transsmision_type"];
     
     
