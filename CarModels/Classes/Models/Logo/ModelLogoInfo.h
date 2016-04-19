@@ -14,5 +14,6 @@
 @property (strong, nonatomic) NSString *imageName;
 @property (strong, nonatomic) NSString *logoName;
 @property (strong, nonatomic) NSString *backgroundImageURL;
+@property (nonatomic) BOOL haveCategories;
 
 @end

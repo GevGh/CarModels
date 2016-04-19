@@ -12,6 +12,7 @@
 #import "LogoTableViewCell.h"
 
 #import "CategoryViewControllers.h"
+#import "CarModelsViewController.h"
 
 @interface MainViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -62,8 +63,19 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    [self performSegueWithIdentifier:@"mainToCategory"
-                              sender:[self.arrayLogoModels objectAtIndex:indexPath.row]];
+    
+    ModelLogoInfo *info = [self.arrayLogoModels objectAtIndex:indexPath.row];
+    
+    if (info.haveCategories) {
+        
+        
+        [self performSegueWithIdentifier:@"mainToCategory"
+                                  sender:info];
+    } else {
+        
+        [self performSegueWithIdentifier:@"mainToCarModel"
+                                  sender:info];
+    }
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
@@ -81,6 +93,11 @@
         
         CategoryViewControllers *vc = (CategoryViewControllers *)segue.destinationViewController;
         vc.modelInfo = sender;
+    } else if ([segue.identifier isEqualToString:@"mainToCarModel"]) {
+        
+        CarModelsViewController *vc = (CarModelsViewController *)segue.destinationViewController;
+        
+        vc.isFromMain = YES;
     }
 }
 

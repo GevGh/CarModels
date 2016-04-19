@@ -34,7 +34,8 @@ UICollectionViewDelegateFlowLayout
     [super viewDidLoad];
     [self setupUI];
     self.imagesData = self.carModel.imageIds;
-    self.enginesData = self.carModel.engines.allObjects;
+    NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"order" ascending:YES];
+    self.enginesData = [self.carModel.engines sortedArrayUsingDescriptors:@[sortDescriptor]];
 }
 
 - (void)setupUI {
@@ -111,7 +112,6 @@ UICollectionViewDelegateFlowLayout
         
         return collectionView.frame.size;
     }
-    
 }
 
 @end

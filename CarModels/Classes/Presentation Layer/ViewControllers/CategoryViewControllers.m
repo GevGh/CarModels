@@ -18,6 +18,7 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageViewLogo;
 @property (weak, nonatomic) IBOutlet UITableView *tableViewMain;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 @property (strong, nonatomic) ServiceCompany *serviceCompany;
 @property (strong, nonatomic) CoreDataCompany *companyCD;
@@ -53,8 +54,29 @@
     [self loadDatafromServer];
 }
 
+- (void)startLoading {
+    
+    self.activityIndicator.hidden = NO;
+    [self.activityIndicator startAnimating];
+    self.tableViewMain.hidden = YES;
+}
+
+- (void)stopLoading {
+    
+    [self.activityIndicator stopAnimating];
+    [self.activityIndicator removeFromSuperview];
+    self.tableViewMain.alpha = 0.0;
+    self.tableViewMain.hidden = NO;
+    [UIView animateWithDuration:0.3
+                     animations:^{
+                         
+                         self.tableViewMain.alpha = 1.0;
+                     }];
+}
+
 - (void)setupUI {
     
+    self.activityIndicator.hidden = YES;
     self.imageViewLogo.image = [UIImage imageNamed:self.modelInfo.imageName];
     
     self.tableViewMain.delegate = self;
@@ -67,6 +89,7 @@
     if (self.companyCD == nil) {
         
         //TODO::: start loading data
+        [self startLoading];
     } else {
         
         [self reloadTableView];
@@ -78,6 +101,7 @@
     [self.serviceCompany loadCompanyInfoWithId:self.modelInfo.identifier
                                     completion:^(CoreDataCompany *company) {
                                         
+                                        [self stopLoading];
                                         if (!company) {
                                             
                                             NSLog(@"CRASH ::: ERROR ");
@@ -91,7 +115,9 @@
 
 - (void)reloadTableView {
     
-    self.categoriesData = self.companyCD.categories.allObjects;
+    NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"order" ascending:YES];
+    self.categoriesData = [self.companyCD.categories sortedArrayUsingDescriptors:@[sortDescriptor]];
+
     self.awsBucketName = self.companyCD.awsBucketName;
     
     [self.tableViewMain reloadData];
@@ -130,7 +156,9 @@
         
         CarModelsViewController *modelVC = (CarModelsViewController *)segue.destinationViewController;
         CoreDataCategory *category = sender;
-        modelVC.modelsData = category.models.allObjects;
+        NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"order" ascending:YES];
+        modelVC.modelsData = [category.models sortedArrayUsingDescriptors:@[sortDescriptor]];
+
         modelVC.awsBucketName = self.awsBucketName;
         modelVC.navTitle = category.name;
     }
