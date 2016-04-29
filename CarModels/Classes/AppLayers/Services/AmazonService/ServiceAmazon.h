@@ -12,6 +12,8 @@
 
 + (void)setupAmazonConfigurations;
 
+- (void)cancelDownloadinRequestForKey:(NSString *)key;
+
 - (void)downloadAWSPhotoWithBucketName:(NSString *)bucketName
                              imageName:(NSString *)imageName
                                 toPath:(NSString *)downloadingFilePath

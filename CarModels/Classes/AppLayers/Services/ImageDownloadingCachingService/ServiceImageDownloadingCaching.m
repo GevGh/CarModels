@@ -19,25 +19,21 @@
 
 @implementation ServiceImageDownloadingCaching
 
-static NSMutableSet *downloadingProcces;
-
-- (NSMutableSet *)downloadingProcces {
++ (instancetype)sharedInstance {
     
-    if (downloadingProcces == nil) {
+    static ServiceImageDownloadingCaching *downloadingService;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
         
-        downloadingProcces = [[NSMutableSet alloc] init];
-    }
-    return downloadingProcces;
+        downloadingService = [[ServiceImageDownloadingCaching alloc] init];
+        downloadingService.serviceAmazon = [[ServiceAmazon alloc] init];
+    });
+    return downloadingService;
 }
 
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        
-        _serviceAmazon = [[ServiceAmazon alloc] init];
-    }
-    return self;
+- (void)cancelDownloadinRequestForKey:(NSString *)key {
+    
+    [self.serviceAmazon cancelDownloadinRequestForKey:key];
 }
 
 - (void)getLogoBackgroungImageWithId:(NSString *)imageId completion:(void(^)(UIImage *image))completion {
@@ -53,20 +49,13 @@ static NSMutableSet *downloadingProcces;
             return;
         } else {
             
-            if ([self.downloadingProcces containsObject:path]) {
-                
-                NSLog(@"WARNING ::: already downloading");
-                return;
-            }
             
-            [self.downloadingProcces addObject:path];
+            
             
             [self.serviceAmazon downloadAWSPhotoWithBucketName:kAWSLogoBackgroundBucketName
                                                      imageName:imageId
                                                         toPath:path
                                                     completion:^(NSError *error) {
-                                                        
-                                                        [self.downloadingProcces removeObject:path];
                                                         
                                                         if (error) {
                                                             
@@ -97,20 +86,10 @@ static NSMutableSet *downloadingProcces;
             return;
         } else {
             
-            if ([self.downloadingProcces containsObject:path]) {
-                
-                NSLog(@"WARNING ::: already downloading");
-                return;
-            }
-            
-            [self.downloadingProcces addObject:path];
-            
             [self.serviceAmazon downloadAWSPhotoWithBucketName:bucket
                                                      imageName:imageID
                                                         toPath:path
                                                     completion:^(NSError *error) {
-                                                        
-                                                        [self.downloadingProcces removeObject:path];
                                                         
                                                         if (error) {
                                                             

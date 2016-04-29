@@ -295,10 +295,18 @@
 			name = EngineInfoTableViewCell;
 			sourceTree = "<group>";
 		};
+		EFE660E51CD3F82000C47956 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 		EFEA9A321C9F1CC400F40CAD /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				EFEA9A331C9F1CF100F40CAD /* Constant.h */,
+				EFE660E51CD3F82000C47956 /* Categories */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";

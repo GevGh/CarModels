@@ -12,6 +12,10 @@
 
 @interface ServiceImageDownloadingCaching : NSObject
 
++ (instancetype)sharedInstance;
+
+- (void)cancelDownloadinRequestForKey:(NSString *)key;
+
 - (void)getLogoBackgroungImageWithId:(NSString *)imageId
                           completion:(void(^)(UIImage *image))completion;
 

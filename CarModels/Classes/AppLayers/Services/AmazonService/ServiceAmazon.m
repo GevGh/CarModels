@@ -10,7 +10,22 @@
 #import <AWSCore/AWSCore.h>
 #import <AWSS3/AWSS3.h>
 
+@interface ServiceAmazon ()
+
+@property (nonatomic, strong) NSMutableDictionary *downloadingImageTasks;
+
+@end
+
 @implementation ServiceAmazon
+
+- (NSMutableDictionary *)downloadingImageTasks {
+    
+    if (_downloadingImageTasks == nil) {
+        
+        _downloadingImageTasks = [[NSMutableDictionary alloc] init];
+    }
+    return _downloadingImageTasks;
+}
 
 + (void)setupAmazonConfigurations {
     
@@ -24,11 +39,31 @@
     [AWSServiceManager defaultServiceManager].defaultServiceConfiguration = configuration;
 }
 
+- (void)cancelDownloadinRequestForKey:(NSString *)key {
+    
+    if (!key) {
+        return;
+    }
+    
+    AWSS3TransferManagerDownloadRequest *downloadRequest = [self.downloadingImageTasks objectForKey:key];
+    
+    if (downloadRequest) {
+        
+        [downloadRequest cancel];
+        [self.downloadingImageTasks removeObjectForKey:key];
+    }
+}
+
 - (void)downloadAWSPhotoWithBucketName:(NSString *)bucketName
                              imageName:(NSString *)imageName
                                 toPath:(NSString *)downloadingFilePath
                             completion:(void(^)(NSError *error))completion {
     
+    if ([self.downloadingImageTasks objectForKey:imageName]) {
+        
+        NSLog(@"%@   WARNING ::: already downloading", imageName);
+        return;
+    }
     
     AWSS3TransferManager *transferManager = [AWSS3TransferManager defaultS3TransferManager];
     
@@ -42,9 +77,13 @@
     downloadRequest.key = [NSString stringWithFormat:@"%@.jpg", imageName];
     downloadRequest.downloadingFileURL = downloadingFileURL;
     
+    [self.downloadingImageTasks setValue:downloadRequest forKey:imageName];
+    
     // Download the file.
     [[transferManager download:downloadRequest] continueWithExecutor:[AWSExecutor mainThreadExecutor]
                                                            withBlock:^id(AWSTask *task) {
+                                                               
+                                                               [self.downloadingImageTasks removeObjectForKey:imageName];
                                                                
                                                                if (task.error){
                                                                    if ([task.error.domain isEqualToString:AWSS3TransferManagerErrorDomain]) {

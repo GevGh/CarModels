@@ -18,7 +18,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelName;
 @property (weak, nonatomic) IBOutlet UILabel *labelYear;
 
-@property (strong, nonatomic) ServiceImageDownloadingCaching *serviceImageDownloading;
+@property (strong, nonatomic) NSString *imageId;
 
 @end
 
@@ -27,13 +27,18 @@
 - (void)awakeFromNib {
     
     [super awakeFromNib];
-    self.serviceImageDownloading = [[ServiceImageDownloadingCaching alloc] init];
 }
 
 - (void)prepareForReuse {
     
     [super prepareForReuse];
-    self.imageViewBackground.image = nil;
+    
+    if (self.imageId) {
+        
+        self.imageViewBackground.image = nil;
+        [[ServiceImageDownloadingCaching sharedInstance] cancelDownloadinRequestForKey:self.imageId];
+    }
+    
 }
 
 - (void)configureWithCarModel:(CoreDataCarModel *)model
@@ -45,25 +50,21 @@
     NSArray *imageURLs = model.imageIds;
     NSString *firstUrl = imageURLs.firstObject;
     
-    [self.serviceImageDownloading getImageForBucket:bucketName
-                                            imageID:firstUrl
-                                         completion:^(UIImage *image) {
-                                             
-                                             // Decompress image
-                                             if (image) {
-                                                 
-                                                 dispatch_async(dispatch_get_main_queue(), ^{
-                                                     
-                                                     self.imageViewBackground.image = image;
-                                                 });
-                                             }
-                                         }];
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+    self.imageId = firstUrl;
+    
+    [[ServiceImageDownloadingCaching sharedInstance] getImageForBucket:bucketName
+                                                               imageID:firstUrl
+                                                            completion:^(UIImage *image) {
+                                                                
+                                                                // Decompress image
+                                                                if (image) {
+                                                                    
+                                                                    dispatch_async(dispatch_get_main_queue(), ^{
+                                                                        
+                                                                        self.imageViewBackground.image = image;
+                                                                    });
+                                                                }
+                                                            }];
 }
 
 @end

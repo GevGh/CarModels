@@ -12,7 +12,8 @@
 @interface CurrentModelImageCollectionViewCell ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
-@property (strong, nonatomic) ServiceImageDownloadingCaching *serviceImageDownloading;
+
+@property (strong, nonatomic) NSString *imageId;
 
 @end
 
@@ -21,31 +22,34 @@
 - (void)awakeFromNib {
     
     [super awakeFromNib];
-    self.serviceImageDownloading = [[ServiceImageDownloadingCaching alloc] init];
 }
 
 - (void)prepareForReuse {
     
     [super prepareForReuse];
-    self.imageView.image = nil;
+    if (self.imageId) {
+        
+        self.imageView.image = nil;
+        [[ServiceImageDownloadingCaching sharedInstance] cancelDownloadinRequestForKey:self.imageId];
+    }
 }
 
 - (void)configureWithImageId:(NSString *)imageId bucketName:(NSString *)bucketName {
     
-    
-    [self.serviceImageDownloading getImageForBucket:bucketName
-                                            imageID:imageId
-                                         completion:^(UIImage *image) {
-                                             
-                                             // Decompress image
-                                             if (image) {
-                                                 
-                                                 dispatch_async(dispatch_get_main_queue(), ^{
-                                                     
-                                                     self.imageView.image = image;
-                                                 });
-                                             }
-                                         }];
+    self.imageId = imageId;
+    [[ServiceImageDownloadingCaching sharedInstance] getImageForBucket:bucketName
+                                                               imageID:imageId
+                                                            completion:^(UIImage *image) {
+                                                                
+                                                                // Decompress image
+                                                                if (image) {
+                                                                    
+                                                                    dispatch_async(dispatch_get_main_queue(), ^{
+                                                                        
+                                                                        self.imageView.image = image;
+                                                                    });
+                                                                }
+                                                            }];
 }
 
 @end

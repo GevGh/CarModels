@@ -17,7 +17,7 @@
 @property (weak, nonatomic) IBOutlet UIView *viewAlpha;
 @property (weak, nonatomic) IBOutlet UILabel *labelName;
 
-@property (strong, nonatomic) ServiceImageDownloadingCaching *serviceImageDownloading;
+@property (strong, nonatomic) NSString *imageId;
 
 @end
 
@@ -27,33 +27,37 @@
     
     [super awakeFromNib];
     self.viewMain.backgroundColor = [UIColor clearColor];
-    self.serviceImageDownloading = [[ServiceImageDownloadingCaching alloc] init];
+    
 }
 
 - (void)prepareForReuse {
     
     [super prepareForReuse];
-    self.imageViewBackground.image = nil;
+    if (self.imageId) {
+        
+        self.imageViewBackground.image = nil;
+        [[ServiceImageDownloadingCaching sharedInstance] cancelDownloadinRequestForKey:self.imageId];
+    }
 }
 
 - (void)configureWithCategoryModel:(CoreDataCategory *)category
                         bucketName:(NSString *)bucketName {
     
+    self.imageId = category.imageId;
     self.labelName.text = category.name;
-    
-    [self.serviceImageDownloading getImageForBucket:bucketName
-                                            imageID:category.imageId
-                                         completion:^(UIImage *image) {
-                                             
-                                             // Decompress image
-                                             if (image) {
-                                                 
-                                                 dispatch_async(dispatch_get_main_queue(), ^{
-                                                     
-                                                     self.imageViewBackground.image = image;
-                                                 });
-                                             }
-                                         }];
+    [[ServiceImageDownloadingCaching sharedInstance] getImageForBucket:bucketName
+                                                               imageID:category.imageId
+                                                            completion:^(UIImage *image) {
+                                                                
+                                                                // Decompress image
+                                                                if (image) {
+                                                                    
+                                                                    dispatch_async(dispatch_get_main_queue(), ^{
+                                                                        
+                                                                        self.imageViewBackground.image = image;
+                                                                    });
+                                                                }
+                                                            }];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

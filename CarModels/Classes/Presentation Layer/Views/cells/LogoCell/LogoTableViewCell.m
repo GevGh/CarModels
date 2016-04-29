@@ -17,7 +17,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageViewLogo;
 @property (weak, nonatomic) IBOutlet UILabel *labelLogoName;
 
-@property (strong, nonatomic) ServiceImageDownloadingCaching *serviceImageDownloading;
+@property (strong, nonatomic) NSString *imageId;
 
 @end
 
@@ -27,33 +27,38 @@
 
     [super awakeFromNib];
     self.viewMain.backgroundColor = [UIColor clearColor];
-    self.serviceImageDownloading = [[ServiceImageDownloadingCaching alloc] init];
 }
 
 - (void)prepareForReuse {
     
     [super prepareForReuse];
-    self.imageViewBackground.image = nil;
+    if (self.imageId) {
+        
+        self.imageViewBackground.image = nil;
+        [[ServiceImageDownloadingCaching sharedInstance] cancelDownloadinRequestForKey:self.imageId];
+    }
 }
 
 - (void)configureViewWithModel:(ModelLogoInfo *)logoInfo {
     
+    self.imageId = logoInfo.identifier;
+    
     self.imageViewLogo.image = [UIImage imageNamed:logoInfo.imageName];
     self.labelLogoName.text = logoInfo.logoName;
-    [self.serviceImageDownloading getLogoBackgroungImageWithId:logoInfo.identifier
-                                                    completion:^(UIImage *image) {
-                                                        
-                                                        NSLog(@"%@", image);
-                                                        
-                                                        // Decompress image
-                                                        if (image) {
-                                                            
-                                                            dispatch_async(dispatch_get_main_queue(), ^{
-                                                                
-                                                                self.imageViewBackground.image = image;
-                                                            });
-                                                        }
-                                                    }];
+    [[ServiceImageDownloadingCaching sharedInstance] getLogoBackgroungImageWithId:logoInfo.identifier
+                                                                       completion:^(UIImage *image) {
+                                                                           
+                                                                           NSLog(@"%@", image);
+                                                                           
+                                                                           // Decompress image
+                                                                           if (image) {
+                                                                               
+                                                                               dispatch_async(dispatch_get_main_queue(), ^{
+                                                                                   
+                                                                                   self.imageViewBackground.image = image;
+                                                                               });
+                                                                           }
+                                                                       }];
 }
 
 - (void)cellInTableView:(UITableView *)tableView DidScrollOnView:(UIView *)view {
