@@ -5,8 +5,14 @@
 
 target 'CarModels' do
 
+pod 'Fabric'
+pod 'Crashlytics'
+
 pod 'Firebase', '>= 2.5.0'
 pod 'AWSS3'
+
+#ads
+pod 'mopub-ios-sdk'
 
 end
 

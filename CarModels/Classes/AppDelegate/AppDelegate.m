@@ -9,6 +9,9 @@
 #import "AppDelegate.h"
 #import "ServiceAmazon.h"
 #import "CoreDataController.h"
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
+#import "MoPub.h"
 
 @interface AppDelegate ()
 
@@ -25,6 +28,10 @@
     
     //setup core data
     [CoreDataController sharedInstance];
+    
+    //setup fabric
+    [Fabric with:@[[Crashlytics class], [MoPub class]]];
+    [[Fabric sharedSDK] setDebug:YES];
     
     return YES;
 }
