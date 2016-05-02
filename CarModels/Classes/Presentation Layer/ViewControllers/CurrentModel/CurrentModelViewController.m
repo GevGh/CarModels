@@ -10,6 +10,7 @@
 #import "CoreDataCarModel.h"
 #import "CurrentModelImageCollectionViewCell.h"
 #import "EngineCollectionViewCell.h"
+#import "AdLogicService.h"
 
 @interface CurrentModelViewController ()
 <
@@ -32,6 +33,9 @@ UICollectionViewDelegateFlowLayout
 - (void)viewDidLoad {
     
     [super viewDidLoad];
+    
+    [[AdLogicService sharedInstance] openedPoint:4];
+    
     [self setupUI];
     self.imagesData = self.carModel.imageIds;
     NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"order" ascending:YES];

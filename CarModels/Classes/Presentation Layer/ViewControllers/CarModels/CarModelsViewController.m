@@ -9,8 +9,9 @@
 #import "CarModelsViewController.h"
 #import "CarModelTableViewCell.h"
 #import "CurrentModelViewController.h"
+#import "AdLogicService.h"
 
-@interface CarModelsViewController ()<UITableViewDelegate, UITableViewDataSource>
+@interface CarModelsViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableViewMain;
 @property (weak, nonatomic) IBOutlet UILabel *labelNavTitle;
@@ -22,12 +23,11 @@
 - (void)viewDidLoad {
 
     [super viewDidLoad];
+    [[AdLogicService sharedInstance] openedPoint:2];
     [self setupUI];
 }
 
 - (void)setupUI {
-    
-//    self.imageViewLogo.image = [UIImage imageNamed:self.modelInfo.imageName];
     
     self.labelNavTitle.text = self.navTitle;
     

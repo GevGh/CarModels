@@ -47,9 +47,7 @@
     self.labelLogoName.text = logoInfo.logoName;
     [[ServiceImageDownloadingCaching sharedInstance] getLogoBackgroungImageWithId:logoInfo.identifier
                                                                        completion:^(UIImage *image) {
-                                                                           
-                                                                           NSLog(@"%@", image);
-                                                                           
+                                                                                                                                                      
                                                                            // Decompress image
                                                                            if (image) {
                                                                                

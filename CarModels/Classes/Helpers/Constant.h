@@ -12,7 +12,14 @@
 //static NSString const *kAWSSecretKey = @"n8uXUTjJQZbq+JqNsTOBPawxduwLGYgDJJqqXybm";
 //static NSString const *kAWSAccessKey = @"AKIAIPWBBFT5LICCTJLQ";
 
-static NSString  * const kAWSLogoBackgroundBucketName = @"carbackgroundbucket";
+static NSString * const kAWSLogoBackgroundBucketName = @"carbackgroundbucket";
+
+//ads
+static NSInteger const kAdShowCount = 30;
+static float const kAdShowTime = 3 * 60;
+
+//notifications
+static NSString * const kShowAdNotification = @"ShowAdNotification";
 
 
 #endif /* Header_h */

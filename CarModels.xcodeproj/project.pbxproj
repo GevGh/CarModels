@@ -31,6 +31,7 @@
 		EFEA9A391C9F38B300F40CAD /* ServiceLogo.m in Sources */ = {isa = PBXBuildFile; fileRef = EFEA9A381C9F38B300F40CAD /* ServiceLogo.m */; };
 		EFEA9A3C1C9F38D900F40CAD /* ServiceAmazon.m in Sources */ = {isa = PBXBuildFile; fileRef = EFEA9A3B1C9F38D900F40CAD /* ServiceAmazon.m */; };
 		EFEA9A401C9F3F5000F40CAD /* ServiceImageDownloadingCaching.m in Sources */ = {isa = PBXBuildFile; fileRef = EFEA9A3F1C9F3F5000F40CAD /* ServiceImageDownloadingCaching.m */; };
+		EFEB51701CD4ACAE0044526D /* AdLogicService.m in Sources */ = {isa = PBXBuildFile; fileRef = EFEB516F1CD4ACAE0044526D /* AdLogicService.m */; };
 		EFEF6AAF1C8F509C0072FBE2 /* LogoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFEF6AAE1C8F509C0072FBE2 /* LogoTableViewCell.m */; };
 		EFEF6AB71C8F54300072FBE2 /* ModelLogoInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EFEF6AB61C8F54300072FBE2 /* ModelLogoInfo.m */; };
 		EFF822831CA815AA00F9B8A6 /* CategoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF822821CA815AA00F9B8A6 /* CategoryTableViewCell.m */; };
@@ -90,6 +91,8 @@
 		EFEA9A3B1C9F38D900F40CAD /* ServiceAmazon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServiceAmazon.m; path = Classes/AppLayers/Services/AmazonService/ServiceAmazon.m; sourceTree = "<group>"; };
 		EFEA9A3E1C9F3F5000F40CAD /* ServiceImageDownloadingCaching.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServiceImageDownloadingCaching.h; path = Classes/AppLayers/Services/ImageDownloadingCachingService/ServiceImageDownloadingCaching.h; sourceTree = "<group>"; };
 		EFEA9A3F1C9F3F5000F40CAD /* ServiceImageDownloadingCaching.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServiceImageDownloadingCaching.m; path = Classes/AppLayers/Services/ImageDownloadingCachingService/ServiceImageDownloadingCaching.m; sourceTree = "<group>"; };
+		EFEB516E1CD4ACAE0044526D /* AdLogicService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AdLogicService.h; path = Classes/Helpers/AdLogicService.h; sourceTree = "<group>"; };
+		EFEB516F1CD4ACAE0044526D /* AdLogicService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AdLogicService.m; path = Classes/Helpers/AdLogicService.m; sourceTree = "<group>"; };
 		EFEF6AAD1C8F509C0072FBE2 /* LogoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogoTableViewCell.h; path = "Classes/Presentation Layer/Views/cells/LogoCell/LogoTableViewCell.h"; sourceTree = "<group>"; };
 		EFEF6AAE1C8F509C0072FBE2 /* LogoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LogoTableViewCell.m; path = "Classes/Presentation Layer/Views/cells/LogoCell/LogoTableViewCell.m"; sourceTree = "<group>"; };
 		EFEF6AB51C8F54300072FBE2 /* ModelLogoInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ModelLogoInfo.h; path = Classes/Models/Logo/ModelLogoInfo.h; sourceTree = "<group>"; };
@@ -307,6 +310,8 @@
 			children = (
 				EFEA9A331C9F1CF100F40CAD /* Constant.h */,
 				EFE660E51CD3F82000C47956 /* Categories */,
+				EFEB516E1CD4ACAE0044526D /* AdLogicService.h */,
+				EFEB516F1CD4ACAE0044526D /* AdLogicService.m */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -626,6 +631,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFEA9A401C9F3F5000F40CAD /* ServiceImageDownloadingCaching.m in Sources */,
+				EFEB51701CD4ACAE0044526D /* AdLogicService.m in Sources */,
 				EF83F5CD1C86078300603204 /* MainViewController.m in Sources */,
 				EF93D2FE1CA057B50042C16D /* CoreDataCategory.m in Sources */,
 				EFFCA5581CA6C31D0054BBA0 /* ServiceCompany.m in Sources */,

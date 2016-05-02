@@ -13,6 +13,7 @@
 #import "CoreDataCategory.h"
 #import "CategoryTableViewCell.h"
 #import "CarModelsViewController.h"
+#import "AdLogicService.h"
 
 @interface CategoryViewControllers () <UITableViewDelegate, UITableViewDataSource>
 
@@ -48,7 +49,7 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    
+    [[AdLogicService sharedInstance] openedPoint:1];
     [self setupUI];
     [self loadDataFromCoreData];
     [self loadDatafromServer];

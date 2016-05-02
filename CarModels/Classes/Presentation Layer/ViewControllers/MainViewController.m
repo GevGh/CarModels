@@ -14,13 +14,18 @@
 #import "CategoryViewControllers.h"
 #import "CarModelsViewController.h"
 
-@interface MainViewController () <UITableViewDataSource, UITableViewDelegate>
+#import "MoPub.h"
+#import "Constant.h"
+
+@interface MainViewController () <UITableViewDataSource, UITableViewDelegate, MPInterstitialAdControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableViewMain;
 
 @property (strong, nonatomic) ServiceLogo *serviceLogo;
 
 @property (strong, nonatomic) NSArray <__kindof ModelLogoInfo*> *  arrayLogoModels;
+
+@property (nonatomic, retain) MPInterstitialAdController *interstitial;
 
 @end
 
@@ -29,7 +34,8 @@
 - (void)viewDidLoad {
 
     [super viewDidLoad];
-    
+    [self loadAdd];
+
     self.navigationController.navigationBarHidden = NO;
     self.navigationController.navigationBar.hidden = YES;
     
@@ -39,10 +45,46 @@
     self.tableViewMain.delegate = self;
     self.tableViewMain.dataSource = self;
     
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(showAd)
+                                                 name:kShowAdNotification
+                                               object:nil];
 }
+
+- (void)loadAdd {
+    
+    // TODO: Replace this test id with your personal ad unit id
+    self.interstitial = [MPInterstitialAdController interstitialAdControllerForAdUnitId:@"77ce0b65cf81438eb255695afe3b1904"];
+    self.interstitial.delegate = self;
+    
+    // Pre-fetch the ad up front
+    [self.interstitial loadAd];
+}
+
+- (void)showAd {
+    
+    if (self.interstitial.ready) {
+        
+        [self.interstitial showFromViewController:self];
+    }
+}
+
+
+#pragma mark - <MPInterstitialAdControllerDelegate>
+- (void)interstitialDidLoadAd:(MPInterstitialAdController *)interstitial {
+    // This sample automatically shows the ad as soon as it's loaded, but
+    // you can move this showFromViewController call to a time more
+    // appropriate for your app.
+    //    if (interstitial.ready) {
+    // Ad will dismiss itself
+    //        [interstitial showFromViewController:self];
+    //    }
+}
+
 
 - (void)viewDidAppear:(BOOL)animated {
     
+    [super viewDidAppear:animated];
     [self scrollViewDidScroll:self.tableViewMain];
 }
 
