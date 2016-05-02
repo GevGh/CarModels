@@ -46,7 +46,7 @@
     
     NSMutableArray *tmpArray = [[NSMutableArray alloc] init];
     [tmpArray addObject:engine.name ? engine.name : @""];
-    [tmpArray addObject:engine.abarot ? engine.abarot : @""];
+    [tmpArray addObject:engine.rpm ? engine.rpm : @""];
     [tmpArray addObject:engine.acceleration ? engine.acceleration : @""];
     [tmpArray addObject:engine.caxs ? engine.caxs : @""];
     [tmpArray addObject:engine.co2 ? engine.co2 : @""];

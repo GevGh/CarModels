@@ -15,7 +15,6 @@
         <relationship name="models" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Model" syncable="YES"/>
     </entity>
     <entity name="Engine" representedClassName="CoreDataEngine" syncable="YES">
-        <attribute name="abarot" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="acceleration" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="caxs" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="co2" optional="YES" attributeType="String" syncable="YES"/>
@@ -27,6 +26,7 @@
         <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="qarshak" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="qash" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rpm" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="torque" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="valve" optional="YES" attributeType="String" syncable="YES"/>

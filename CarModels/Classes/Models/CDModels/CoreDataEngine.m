@@ -23,7 +23,7 @@
 @dynamic torque;
 @dynamic type;
 @dynamic valve;
-@dynamic abarot;
+@dynamic rpm;
 @dynamic order;
 
 - (void)configureWithData:(NSDictionary *)data {
@@ -40,7 +40,7 @@
     self.hoursePower = [data objectForKey:@"hourspower"];
     self.caxs = [data objectForKey:@"caxs"];
     self.acceleration = [data objectForKey:@"acceleration"];
-    self.abarot = [data objectForKey:@"abarot"];
+    self.rpm = [data objectForKey:@"rpm"];
     self.qarshak = [data objectForKey:@"qarshak"];
     self.order = [data objectForKey:@"order"];
 }
