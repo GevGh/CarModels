@@ -30,16 +30,17 @@
     self.keysData = @[@"",
                       @"RPM",
                       @"Acceleration",
-                      @"Caxs",
+                      @"Fuel consumption",
                       @"CO2",
                       @"HP",
-                      @"Litr",
+                      @"Volume of engine",
                       @"Max Speed",
-                      @"qarshak",
+                      @"Wheel drive",
                       @"Torque",
                       @"Type",
                       @"Valve",
-                      @"Qash"];
+                      @"Cilinder",
+                      @"Weight"];
 }
 
 - (void)configureWithEngine:(CoreDataEngine *)engine {
@@ -57,6 +58,7 @@
     [tmpArray addObject:engine.torque ? engine.torque : @""];
     [tmpArray addObject:engine.type ? engine.type : @""];
     [tmpArray addObject:engine.valve ? engine.valve : @""];
+    [tmpArray addObject:engine.cilinder ? engine.cilinder : @""];
     [tmpArray addObject:engine.qash ? engine.qash : @""];
     
     self.engineData = [NSArray arrayWithArray:tmpArray];
@@ -68,7 +70,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return 13;
+    return self.keysData.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

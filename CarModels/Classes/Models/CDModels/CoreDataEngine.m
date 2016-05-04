@@ -43,6 +43,7 @@
     self.rpm = [data objectForKey:@"rpm"];
     self.qarshak = [data objectForKey:@"qarshak"];
     self.order = [data objectForKey:@"order"];
+    self.cilinder = [data objectForKey:@"cilinder"];
 }
 
 @end
