@@ -57,16 +57,6 @@ UICollectionViewDelegateFlowLayout
     self.labelNavTitle.text = self.carModel.name;
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-    
-    [super viewDidAppear:animated];
-}
-
-- (void)didReceiveMemoryWarning {
-
-    [super didReceiveMemoryWarning];
-}
-
 - (IBAction)buttonHandlerBack:(UIButton *)sender {
     
     [self.navigationController popViewControllerAnimated:YES];

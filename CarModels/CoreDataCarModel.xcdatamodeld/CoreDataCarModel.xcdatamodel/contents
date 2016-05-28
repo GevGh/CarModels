@@ -16,36 +16,34 @@
     </entity>
     <entity name="Engine" representedClassName="CoreDataEngine" syncable="YES">
         <attribute name="acceleration" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="caxs" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="capacity" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="cilinder" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="co2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="consumption" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fuelTank" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="hoursePower" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="identifier" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="litr" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="maxSpeed" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="qarshak" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="qash" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="rpm" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="torque" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="valve" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="valvesPerCilinder" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Model" representedClassName="CoreDataCarModel" syncable="YES">
         <attribute name="identifier" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="imageIds" optional="YES" attributeType="Transformable" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="production" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="transsmisions" optional="YES" attributeType="Transformable" syncable="YES"/>
-        <attribute name="yearBegan" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="yearEnd" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="engines" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Engine" syncable="YES"/>
     </entity>
     <elements>
         <element name="Category" positionX="-63" positionY="-18" width="128" height="120"/>
         <element name="Company" positionX="-54" positionY="-9" width="128" height="120"/>
-        <element name="Engine" positionX="-18" positionY="27" width="128" height="285"/>
-        <element name="Model" positionX="-36" positionY="9" width="128" height="165"/>
+        <element name="Engine" positionX="-18" positionY="27" width="128" height="270"/>
+        <element name="Model" positionX="-36" positionY="9" width="128" height="30"/>
     </elements>
 </model>

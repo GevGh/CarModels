@@ -126,7 +126,6 @@
                     <connections>
                         <outlet property="tableViewMain" destination="8Gh-vK-7VK" id="oOC-Lq-hLj"/>
                         <segue destination="rCY-l3-JgD" kind="push" identifier="mainToCategory" id="xa6-2n-Rdo"/>
-                        <segue destination="Q2T-FP-FKj" kind="push" identifier="mainToCarModel" id="Kxj-yS-h1s"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -599,7 +598,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tO8-e9-c82" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1237.5" y="-180.5"/>
+            <point key="canvasLocation" x="1239.5" y="295.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gRp-jQ-Eaj">
@@ -625,7 +624,4 @@
     <resources>
         <image name="left_filled" width="33" height="33"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="Kxj-yS-h1s"/>
-    </inferredMetricsTieBreakers>
 </document>

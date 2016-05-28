@@ -81,11 +81,11 @@
     modelFord.identifier = @"ford_Xu2s8LUUBvHBtZp";
     modelFord.haveCategories = YES;
     
-    ModelLogoInfo *modelGreatWall = [[ModelLogoInfo alloc] init];
-    modelGreatWall.imageName = @"logo_greatwall";
-    modelGreatWall.logoName = @"Great Wall";
-    modelGreatWall.identifier = @"great_wall_2zCuZGstrKQMEiO";
-    modelGreatWall.haveCategories = YES;
+//    ModelLogoInfo *modelGreatWall = [[ModelLogoInfo alloc] init];
+//    modelGreatWall.imageName = @"logo_greatwall";
+//    modelGreatWall.logoName = @"Great Wall";
+//    modelGreatWall.identifier = @"great_wall_2zCuZGstrKQMEiO";
+//    modelGreatWall.haveCategories = YES;
     
     ModelLogoInfo *modelHonda = [[ModelLogoInfo alloc] init];
     modelHonda.imageName = @"logo_honda";
@@ -224,7 +224,7 @@
     [models addObject:modelDodge];
     [models addObject:modelFerrari];
     [models addObject:modelFord];
-    [models addObject:modelGreatWall];
+//    [models addObject:modelGreatWall];
     [models addObject:modelHonda];
     [models addObject:modelInfiniti];
     [models addObject:modelKia];

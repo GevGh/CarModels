@@ -16,8 +16,7 @@
 @dynamic imageIds;
 @dynamic name;
 @dynamic transsmisions;
-@dynamic yearBegan;
-@dynamic yearEnd;
+@dynamic production;
 @dynamic engines;
 @dynamic order;
 
@@ -25,11 +24,9 @@
     
     self.name = [data objectForKey:@"name"];
     self.imageIds = [data objectForKey:@"images"];
-    self.yearBegan = [data objectForKey:@"year_began"];
-    self.yearEnd = [data objectForKey:@"year_end"];
+    self.production = [data objectForKey:@"production"];
     self.order = [data objectForKey:@"order"];
     self.transsmisions = [data objectForKey:@"transsmision_type"];
-    
     
     DAOEngine *daoEngine = [[DAOEngine alloc] init];
     if ([data objectForKey:@"engines"]) {

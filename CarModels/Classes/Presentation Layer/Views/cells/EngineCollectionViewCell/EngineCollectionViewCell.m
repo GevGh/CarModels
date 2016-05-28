@@ -33,14 +33,15 @@
                       @"Fuel consumption",
                       @"CO2",
                       @"HP",
-                      @"Volume of engine",
+                      @"Capacity",
                       @"Max Speed",
                       @"Wheel drive",
                       @"Torque",
                       @"Type",
-                      @"Valve",
+                      @"Valve per cilinder",
                       @"Cilinder",
-                      @"Weight"];
+                      @"Fuel tank"
+                      ];
 }
 
 - (void)configureWithEngine:(CoreDataEngine *)engine {
@@ -49,17 +50,18 @@
     [tmpArray addObject:engine.name ? engine.name : @""];
     [tmpArray addObject:engine.rpm ? engine.rpm : @""];
     [tmpArray addObject:engine.acceleration ? engine.acceleration : @""];
-    [tmpArray addObject:engine.caxs ? engine.caxs : @""];
+    [tmpArray addObject:engine.consumption ? engine.consumption : @""];
     [tmpArray addObject:engine.co2 ? engine.co2 : @""];
     [tmpArray addObject:engine.hoursePower ? engine.hoursePower : @""];
-    [tmpArray addObject:engine.litr ? engine.litr : @""];
+    [tmpArray addObject:engine.capacity ? engine.capacity : @""];
     [tmpArray addObject:engine.maxSpeed ? engine.maxSpeed : @""];
     [tmpArray addObject:engine.qarshak ? engine.qarshak : @""];
     [tmpArray addObject:engine.torque ? engine.torque : @""];
     [tmpArray addObject:engine.type ? engine.type : @""];
-    [tmpArray addObject:engine.valve ? engine.valve : @""];
+    [tmpArray addObject:engine.valvesPerCilinder ? engine.valvesPerCilinder : @""];
     [tmpArray addObject:engine.cilinder ? engine.cilinder : @""];
-    [tmpArray addObject:engine.qash ? engine.qash : @""];
+    [tmpArray addObject:engine.fuelTank ? engine.fuelTank : @""];
+
     
     self.engineData = [NSArray arrayWithArray:tmpArray];
     [self.tableViewEngineInfo reloadData];

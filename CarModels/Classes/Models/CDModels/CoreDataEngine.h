@@ -12,20 +12,21 @@
 
 @property (strong, nonatomic) NSString *identifier;
 @property (strong, nonatomic) NSString *acceleration;
-@property (strong, nonatomic) NSString *caxs;
+@property (strong, nonatomic) NSString *consumption;
 @property (strong, nonatomic) NSString *co2;
-@property (strong, nonatomic) NSString *litr;
+@property (strong, nonatomic) NSString *capacity;
 @property (strong, nonatomic) NSString *hoursePower;
 @property (strong, nonatomic) NSString *maxSpeed;
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSString *qarshak;
-@property (strong, nonatomic) NSString *qash;
 @property (strong, nonatomic) NSString *torque;
 @property (strong, nonatomic) NSString *type;
-@property (strong, nonatomic) NSString *valve;
+@property (strong, nonatomic) NSString *valvesPerCilinder;
 @property (strong, nonatomic) NSString *rpm;
 @property (strong, nonatomic) NSString *cilinder;
+@property (strong, nonatomic) NSString *fuelTank;
 @property (strong, nonatomic) NSNumber *order;
+
 
 
 - (void)configureWithData:(NSDictionary *)data;

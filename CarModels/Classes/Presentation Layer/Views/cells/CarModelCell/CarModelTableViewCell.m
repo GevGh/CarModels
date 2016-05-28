@@ -45,7 +45,7 @@
                    bucketName:(NSString *)bucketName {
     
     self.labelName.text = model.name;
-    self.labelYear.text = [NSString stringWithFormat:@"%@ - %@", model.yearBegan, model.yearEnd];
+    self.labelYear.text = model.production;
     
     NSArray *imageURLs = model.imageIds;
     NSString *firstUrl = imageURLs.firstObject;

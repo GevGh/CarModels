@@ -16,6 +16,4 @@
 @property (strong, nonatomic) NSString *awsBucketName;
 @property (strong, nonatomic) NSString *navTitle;
 
-@property (nonatomic) BOOL isFromMain;
-
 @end

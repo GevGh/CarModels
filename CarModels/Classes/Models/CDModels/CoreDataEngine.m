@@ -12,38 +12,43 @@
 
 @dynamic identifier;
 @dynamic acceleration;
-@dynamic caxs;
+@dynamic consumption;
 @dynamic co2;
-@dynamic litr;
+@dynamic capacity;
 @dynamic hoursePower;
 @dynamic maxSpeed;
 @dynamic name;
 @dynamic qarshak;
-@dynamic qash;
 @dynamic torque;
 @dynamic type;
-@dynamic valve;
+@dynamic valvesPerCilinder;
 @dynamic rpm;
 @dynamic order;
+@dynamic fuelTank;
+@dynamic cilinder;
 
 - (void)configureWithData:(NSDictionary *)data {
     
-    self.co2 = [data objectForKey:@"CO2"];
-    self.valve = [data objectForKey:@"valve"];
-    self.type = [data objectForKey:@"type"];
-    self.torque = [data objectForKey:@"torque"];
-    self.qash = [data objectForKey:@"qash"];
-    self.qarshak = [data objectForKey:@"rwd"];
-    self.name = [data objectForKey:@"name"];
-    self.maxSpeed = [data objectForKey:@"max_speed"];
-    self.litr = [data objectForKey:@"litr"];
-    self.hoursePower = [data objectForKey:@"hourspower"];
-    self.caxs = [data objectForKey:@"caxs"];
-    self.acceleration = [data objectForKey:@"acceleration"];
-    self.rpm = [data objectForKey:@"rpm"];
-    self.qarshak = [data objectForKey:@"qarshak"];
-    self.order = [data objectForKey:@"order"];
-    self.cilinder = [data objectForKey:@"cilinder"];
+    
+//        "id": "60465-ixhpG",
+    
+    
+    
+    self.co2                = [data objectForKey:@"CO2"];
+    self.valvesPerCilinder  = [data objectForKey:@"valves_per_cylinder"];
+    self.type               = [data objectForKey:@"type"];
+    self.torque             = [data objectForKey:@"torque"];
+    self.qarshak            = [data objectForKey:@"rwd"];
+    self.name               = [data objectForKey:@"name"];
+    self.maxSpeed           = [data objectForKey:@"max_speed"];
+    self.capacity           = [data objectForKey:@"capacity"];
+    self.hoursePower        = [data objectForKey:@"hourspower"];
+    self.consumption        = [data objectForKey:@"consumption"];
+    self.acceleration       = [data objectForKey:@"acceleration"];
+    self.rpm                = [data objectForKey:@"max_power_rpm"];
+    self.order              = [data objectForKey:@"order"];
+    self.cilinder           = [data objectForKey:@"cilinder"];
+    self.fuelTank           = [data objectForKey:@"fuel_tank"];
 }
 
 @end
