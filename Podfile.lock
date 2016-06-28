@@ -1,7 +1,4 @@
 PODS:
-  - AWSCore (2.3.6)
-  - AWSS3 (2.3.6):
-    - AWSCore (= 2.3.6)
   - Crashlytics (3.7.0):
     - Fabric (~> 1.6.3)
   - Fabric (1.6.7)
@@ -9,20 +6,24 @@ PODS:
   - mopub-ios-sdk (4.5.1):
     - mopub-ios-sdk/MoPubSDK (= 4.5.1)
   - mopub-ios-sdk/MoPubSDK (4.5.1)
+  - SDWebImage (3.7.6):
+    - SDWebImage/Core (= 3.7.6)
+  - SDWebImage/Core (3.7.6)
 
 DEPENDENCIES:
-  - AWSS3
   - Crashlytics
   - Fabric
   - Firebase (>= 2.5.0)
   - mopub-ios-sdk
+  - SDWebImage (~> 3.7)
 
 SPEC CHECKSUMS:
-  AWSCore: 917d84b32974136194a905b98c0ae25c9f3350b8
-  AWSS3: 1caaf6b45100503fecf3d418c394519a89409a74
   Crashlytics: c3a2333dea9e2733d2777f730910321fc9e25c0d
   Fabric: caf7580c725e64db144f610ac65cd60956911dc7
   Firebase: 3565ea88b830f28f2c77ecc524622bc71a20d085
   mopub-ios-sdk: c1bed2f160479d8aeb29789bdd5f7c8a1a19001d
+  SDWebImage: c325cf02c30337336b95beff20a13df489ec0ec9
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: 238087c85add43ab30981ca5c6daf973f7570321
+
+COCOAPODS: 1.0.0

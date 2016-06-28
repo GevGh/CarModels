@@ -8,7 +8,7 @@
 
 #import "LogoTableViewCell.h"
 #import "ModelLogoInfo.h"
-#import "ServiceImageDownloadingCaching.h"
+#import "UIImageView+WebCache.h"
 
 @interface LogoTableViewCell ()
 
@@ -29,34 +29,20 @@
     self.viewMain.backgroundColor = [UIColor clearColor];
 }
 
-- (void)prepareForReuse {
-    
-    [super prepareForReuse];
-    if (self.imageId) {
-        
-        self.imageViewBackground.image = nil;
-        [[ServiceImageDownloadingCaching sharedInstance] cancelDownloadinRequestForKey:self.imageId];
-    }
-}
-
 - (void)configureViewWithModel:(ModelLogoInfo *)logoInfo {
     
     self.imageId = logoInfo.identifier;
     
     self.imageViewLogo.image = [UIImage imageNamed:logoInfo.imageName];
     self.labelLogoName.text = logoInfo.logoName;
-    [[ServiceImageDownloadingCaching sharedInstance] getLogoBackgroungImageWithId:logoInfo.identifier
-                                                                       completion:^(UIImage *image) {
-                                                                                                                                                      
-                                                                           // Decompress image
-                                                                           if (image) {
-                                                                               
-                                                                               dispatch_async(dispatch_get_main_queue(), ^{
-                                                                                   
-                                                                                   self.imageViewBackground.image = image;
-                                                                               });
-                                                                           }
-                                                                       }];
+    
+    NSString *url = [NSString stringWithFormat:@"https://%@.s3.amazonaws.com/%@.jpg", @"carbackgroundbucket", self.imageId];
+    
+    [self.imageViewBackground sd_setImageWithURL:[NSURL URLWithString:url]
+                                placeholderImage:nil
+                                       completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+                                           
+                                       }];
 }
 
 - (void)cellInTableView:(UITableView *)tableView DidScrollOnView:(UIView *)view {

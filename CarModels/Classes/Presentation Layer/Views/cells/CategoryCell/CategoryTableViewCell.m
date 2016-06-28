@@ -8,7 +8,7 @@
 
 #import "CategoryTableViewCell.h"
 #import "CoreDataCategory.h"
-#import "ServiceImageDownloadingCaching.h"
+#import "UIImageView+WebCache.h"
 
 @interface CategoryTableViewCell ()
 
@@ -30,35 +30,20 @@
     
 }
 
-- (void)prepareForReuse {
-    
-    [super prepareForReuse];
-    if (self.imageId) {
-        
-        self.imageViewBackground.image = nil;
-        [[ServiceImageDownloadingCaching sharedInstance] cancelDownloadinRequestForKey:self.imageId];
-    }
-}
-
 - (void)configureWithCategoryModel:(CoreDataCategory *)category
                         bucketName:(NSString *)bucketName {
     
     self.imageId = category.imageId;
     self.labelName.text = category.name;
     
-    [[ServiceImageDownloadingCaching sharedInstance] getImageForBucket:bucketName
-                                                               imageID:category.imageId
-                                                            completion:^(UIImage *image) {
-                                                                
-                                                                // Decompress image
-                                                                if (image) {
-                                                                    
-                                                                    dispatch_async(dispatch_get_main_queue(), ^{
-                                                                        
-                                                                        self.imageViewBackground.image = image;
-                                                                    });
-                                                                }
-                                                            }];
+    NSString *url = [NSString stringWithFormat:@"https://%@.s3.amazonaws.com/%@", bucketName, category.imageId];
+
+    
+    [self.imageViewBackground sd_setImageWithURL:[NSURL URLWithString:url]
+                                placeholderImage:nil
+                                       completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+                                           
+                                       }];
 }
 
 @end

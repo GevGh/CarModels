@@ -28,6 +28,7 @@
     self.tableViewEngineInfo.dataSource = self;
     
     self.keysData = @[@"",
+                      @"Identifier",
                       @"RPM",
                       @"Acceleration",
                       @"Fuel consumption",
@@ -48,6 +49,9 @@
     
     NSMutableArray *tmpArray = [[NSMutableArray alloc] init];
     [tmpArray addObject:engine.name ? engine.name : @""];
+    
+    
+    [tmpArray addObject:engine.identifier ? engine.identifier : @""];
     [tmpArray addObject:engine.rpm ? engine.rpm : @""];
     [tmpArray addObject:engine.acceleration ? engine.acceleration : @""];
     [tmpArray addObject:engine.consumption ? engine.consumption : @""];
@@ -55,7 +59,7 @@
     [tmpArray addObject:engine.hoursePower ? engine.hoursePower : @""];
     [tmpArray addObject:engine.capacity ? engine.capacity : @""];
     [tmpArray addObject:engine.maxSpeed ? engine.maxSpeed : @""];
-    [tmpArray addObject:engine.qarshak ? engine.qarshak : @""];
+    [tmpArray addObject:engine.wheelDrive ? engine.wheelDrive : @""];
     [tmpArray addObject:engine.torque ? engine.torque : @""];
     [tmpArray addObject:engine.type ? engine.type : @""];
     [tmpArray addObject:engine.valvesPerCilinder ? engine.valvesPerCilinder : @""];

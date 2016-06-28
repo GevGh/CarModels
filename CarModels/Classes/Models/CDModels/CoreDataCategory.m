@@ -22,7 +22,7 @@
     
     DAOModel *daoModel = [[DAOModel alloc] init];
     
-    self.imageId = [data objectForKey:@"image"];
+    self.imageId = [data objectForKey:@"fakePhoto"];
     self.name = [data objectForKey:@"name"];
     self.order = [data objectForKey:@"order"];
     

@@ -18,7 +18,7 @@
 @dynamic hoursePower;
 @dynamic maxSpeed;
 @dynamic name;
-@dynamic qarshak;
+@dynamic wheelDrive;
 @dynamic torque;
 @dynamic type;
 @dynamic valvesPerCilinder;
@@ -38,7 +38,7 @@
     self.valvesPerCilinder  = [data objectForKey:@"valves_per_cylinder"];
     self.type               = [data objectForKey:@"type"];
     self.torque             = [data objectForKey:@"torque"];
-    self.qarshak            = [data objectForKey:@"rwd"];
+    self.wheelDrive            = [data objectForKey:@"WheelDrive"];
     self.name               = [data objectForKey:@"name"];
     self.maxSpeed           = [data objectForKey:@"max_speed"];
     self.capacity           = [data objectForKey:@"capacity"];

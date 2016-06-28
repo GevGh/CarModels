@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "ServiceAmazon.h"
 #import "CoreDataController.h"
 #import <Fabric/Fabric.h>
 #import <Crashlytics/Crashlytics.h>
@@ -21,10 +20,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
     
-    //setup amazon
-    [ServiceAmazon setupAmazonConfigurations];
     
     //setup core data
     [CoreDataController sharedInstance];

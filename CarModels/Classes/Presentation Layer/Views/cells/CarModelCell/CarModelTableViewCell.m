@@ -8,7 +8,7 @@
 
 #import "CarModelTableViewCell.h"
 #import "CoreDataCarModel.h"
-#import "ServiceImageDownloadingCaching.h"
+#import "UIImageView+WebCache.h"
 
 @interface CarModelTableViewCell ()
 
@@ -24,23 +24,6 @@
 
 @implementation CarModelTableViewCell
 
-- (void)awakeFromNib {
-    
-    [super awakeFromNib];
-}
-
-- (void)prepareForReuse {
-    
-    [super prepareForReuse];
-    
-    if (self.imageId) {
-        
-        self.imageViewBackground.image = nil;
-        [[ServiceImageDownloadingCaching sharedInstance] cancelDownloadinRequestForKey:self.imageId];
-    }
-    
-}
-
 - (void)configureWithCarModel:(CoreDataCarModel *)model
                    bucketName:(NSString *)bucketName {
     
@@ -51,20 +34,16 @@
     NSString *firstUrl = imageURLs.firstObject;
     
     self.imageId = firstUrl;
+
     
-    [[ServiceImageDownloadingCaching sharedInstance] getImageForBucket:bucketName
-                                                               imageID:firstUrl
-                                                            completion:^(UIImage *image) {
-                                                                
-                                                                // Decompress image
-                                                                if (image) {
-                                                                    
-                                                                    dispatch_async(dispatch_get_main_queue(), ^{
-                                                                        
-                                                                        self.imageViewBackground.image = image;
-                                                                    });
-                                                                }
-                                                            }];
+    NSString *url = [NSString stringWithFormat:@"https://%@.s3.amazonaws.com/%@", bucketName, firstUrl];
+    
+    
+    [self.imageViewBackground sd_setImageWithURL:[NSURL URLWithString:url]
+                                placeholderImage:nil
+                                       completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+                                           
+                                       }];
 }
 
 @end

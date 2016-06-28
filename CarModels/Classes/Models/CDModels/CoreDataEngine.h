@@ -18,7 +18,7 @@
 @property (strong, nonatomic) NSString *hoursePower;
 @property (strong, nonatomic) NSString *maxSpeed;
 @property (strong, nonatomic) NSString *name;
-@property (strong, nonatomic) NSString *qarshak;
+@property (strong, nonatomic) NSString *wheelDrive;
 @property (strong, nonatomic) NSString *torque;
 @property (strong, nonatomic) NSString *type;
 @property (strong, nonatomic) NSString *valvesPerCilinder;

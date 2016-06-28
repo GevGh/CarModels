@@ -55,7 +55,7 @@
     NSDictionary * myDictionary = data;
     NSData * dataaa = [NSPropertyListSerialization dataFromPropertyList:myDictionary
                                                                format:NSPropertyListBinaryFormat_v1_0 errorDescription:NULL];
-    NSLog(@"size: %d", [dataaa length]);
+    NSLog(@"size: %lu", (unsigned long)[dataaa length]);
     
     if (![data isKindOfClass:[NSDictionary class]]) {
         

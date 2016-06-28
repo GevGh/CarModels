@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0CD83446529D7429B4D05852 /* libPods-CarModels.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BB1B3BF9EA4F3D75719E4156 /* libPods-CarModels.a */; };
+		8A504F6EB5DAE0E5B2B1279B /* libPods-CarModels.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD44C85CA1E4149106F1ECCE /* libPods-CarModels.a */; };
 		EF2136941CA4830200731259 /* DAOCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2136931CA4830200731259 /* DAOCategory.m */; };
 		EF2136971CA4832B00731259 /* DAOModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2136961CA4832B00731259 /* DAOModel.m */; };
 		EF21369A1CA4835F00731259 /* DAOEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2136991CA4835F00731259 /* DAOEngine.m */; };
@@ -29,8 +29,6 @@
 		EFDAE0FA1CAB255600580889 /* EngineCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDAE0F91CAB255600580889 /* EngineCollectionViewCell.m */; };
 		EFDAE0FE1CAB2F3600580889 /* EngineInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDAE0FD1CAB2F3600580889 /* EngineInfoTableViewCell.m */; };
 		EFEA9A391C9F38B300F40CAD /* ServiceLogo.m in Sources */ = {isa = PBXBuildFile; fileRef = EFEA9A381C9F38B300F40CAD /* ServiceLogo.m */; };
-		EFEA9A3C1C9F38D900F40CAD /* ServiceAmazon.m in Sources */ = {isa = PBXBuildFile; fileRef = EFEA9A3B1C9F38D900F40CAD /* ServiceAmazon.m */; };
-		EFEA9A401C9F3F5000F40CAD /* ServiceImageDownloadingCaching.m in Sources */ = {isa = PBXBuildFile; fileRef = EFEA9A3F1C9F3F5000F40CAD /* ServiceImageDownloadingCaching.m */; };
 		EFEB51701CD4ACAE0044526D /* AdLogicService.m in Sources */ = {isa = PBXBuildFile; fileRef = EFEB516F1CD4ACAE0044526D /* AdLogicService.m */; };
 		EFEF6AAF1C8F509C0072FBE2 /* LogoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFEF6AAE1C8F509C0072FBE2 /* LogoTableViewCell.m */; };
 		EFEF6AB71C8F54300072FBE2 /* ModelLogoInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EFEF6AB61C8F54300072FBE2 /* ModelLogoInfo.m */; };
@@ -44,9 +42,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		478F6A86772BC24FE9C4C05A /* Pods-CarModels.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarModels.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CarModels/Pods-CarModels.debug.xcconfig"; sourceTree = "<group>"; };
-		54BF9956A8E48490EBFF4B6E /* Pods-CarModels.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarModels.release.xcconfig"; path = "Pods/Target Support Files/Pods-CarModels/Pods-CarModels.release.xcconfig"; sourceTree = "<group>"; };
-		BB1B3BF9EA4F3D75719E4156 /* libPods-CarModels.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CarModels.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		699001BF5EC42A8F01AD5EBC /* Pods-CarModels.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarModels.release.xcconfig"; path = "Pods/Target Support Files/Pods-CarModels/Pods-CarModels.release.xcconfig"; sourceTree = "<group>"; };
+		731E63985DB7709AA74318F8 /* Pods-CarModels.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarModels.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CarModels/Pods-CarModels.debug.xcconfig"; sourceTree = "<group>"; };
+		BD44C85CA1E4149106F1ECCE /* libPods-CarModels.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CarModels.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF2136921CA4830200731259 /* DAOCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DAOCategory.h; path = Classes/AppLayers/DAO/DAOCategory.h; sourceTree = "<group>"; };
 		EF2136931CA4830200731259 /* DAOCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DAOCategory.m; path = Classes/AppLayers/DAO/DAOCategory.m; sourceTree = "<group>"; };
 		EF2136951CA4832B00731259 /* DAOModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DAOModel.h; path = Classes/AppLayers/DAO/DAOModel.h; sourceTree = "<group>"; };
@@ -87,10 +85,6 @@
 		EFEA9A331C9F1CF100F40CAD /* Constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Constant.h; path = Classes/Helpers/Constant.h; sourceTree = "<group>"; };
 		EFEA9A371C9F38B300F40CAD /* ServiceLogo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServiceLogo.h; path = Classes/AppLayers/Services/Logo/ServiceLogo.h; sourceTree = "<group>"; };
 		EFEA9A381C9F38B300F40CAD /* ServiceLogo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServiceLogo.m; path = Classes/AppLayers/Services/Logo/ServiceLogo.m; sourceTree = "<group>"; };
-		EFEA9A3A1C9F38D900F40CAD /* ServiceAmazon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServiceAmazon.h; path = Classes/AppLayers/Services/AmazonService/ServiceAmazon.h; sourceTree = "<group>"; };
-		EFEA9A3B1C9F38D900F40CAD /* ServiceAmazon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServiceAmazon.m; path = Classes/AppLayers/Services/AmazonService/ServiceAmazon.m; sourceTree = "<group>"; };
-		EFEA9A3E1C9F3F5000F40CAD /* ServiceImageDownloadingCaching.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServiceImageDownloadingCaching.h; path = Classes/AppLayers/Services/ImageDownloadingCachingService/ServiceImageDownloadingCaching.h; sourceTree = "<group>"; };
-		EFEA9A3F1C9F3F5000F40CAD /* ServiceImageDownloadingCaching.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServiceImageDownloadingCaching.m; path = Classes/AppLayers/Services/ImageDownloadingCachingService/ServiceImageDownloadingCaching.m; sourceTree = "<group>"; };
 		EFEB516E1CD4ACAE0044526D /* AdLogicService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AdLogicService.h; path = Classes/Helpers/AdLogicService.h; sourceTree = "<group>"; };
 		EFEB516F1CD4ACAE0044526D /* AdLogicService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AdLogicService.m; path = Classes/Helpers/AdLogicService.m; sourceTree = "<group>"; };
 		EFEF6AAD1C8F509C0072FBE2 /* LogoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogoTableViewCell.h; path = "Classes/Presentation Layer/Views/cells/LogoCell/LogoTableViewCell.h"; sourceTree = "<group>"; };
@@ -118,17 +112,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CD83446529D7429B4D05852 /* libPods-CarModels.a in Frameworks */,
+				8A504F6EB5DAE0E5B2B1279B /* libPods-CarModels.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		33047ACDBEF78CB6F7BA38EA /* Frameworks */ = {
+		28D1217A7CD2F4B1F8CECA6F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				BB1B3BF9EA4F3D75719E4156 /* libPods-CarModels.a */,
+				731E63985DB7709AA74318F8 /* Pods-CarModels.debug.xcconfig */,
+				699001BF5EC42A8F01AD5EBC /* Pods-CarModels.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		2F849B2992C31C32D006F68C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BD44C85CA1E4149106F1ECCE /* libPods-CarModels.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -155,8 +158,8 @@
 			children = (
 				EF5153D81C85FFF1000CAA1C /* CarModels */,
 				EF5153D71C85FFF1000CAA1C /* Products */,
-				FFA37259EA8A2CF77F681483 /* Pods */,
-				33047ACDBEF78CB6F7BA38EA /* Frameworks */,
+				28D1217A7CD2F4B1F8CECA6F /* Pods */,
+				2F849B2992C31C32D006F68C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -316,15 +319,6 @@
 			name = Helpers;
 			sourceTree = "<group>";
 		};
-		EFEA9A351C9F386300F40CAD /* AmazonService */ = {
-			isa = PBXGroup;
-			children = (
-				EFEA9A3A1C9F38D900F40CAD /* ServiceAmazon.h */,
-				EFEA9A3B1C9F38D900F40CAD /* ServiceAmazon.m */,
-			);
-			name = AmazonService;
-			sourceTree = "<group>";
-		};
 		EFEA9A361C9F389700F40CAD /* Logo */ = {
 			isa = PBXGroup;
 			children = (
@@ -332,15 +326,6 @@
 				EFEA9A381C9F38B300F40CAD /* ServiceLogo.m */,
 			);
 			name = Logo;
-			sourceTree = "<group>";
-		};
-		EFEA9A3D1C9F3EF600F40CAD /* ImageDownloadingCachingService */ = {
-			isa = PBXGroup;
-			children = (
-				EFEA9A3E1C9F3F5000F40CAD /* ServiceImageDownloadingCaching.h */,
-				EFEA9A3F1C9F3F5000F40CAD /* ServiceImageDownloadingCaching.m */,
-			);
-			name = ImageDownloadingCachingService;
 			sourceTree = "<group>";
 		};
 		EFEF6AAA1C8F4FFD0072FBE2 /* Views */ = {
@@ -405,9 +390,7 @@
 			children = (
 				EFFCA5511CA6C2850054BBA0 /* ServiceCategory */,
 				EFFCA5501CA6C23F0054BBA0 /* ServiceCompany */,
-				EFEA9A3D1C9F3EF600F40CAD /* ImageDownloadingCachingService */,
 				EFEA9A361C9F389700F40CAD /* Logo */,
-				EFEA9A351C9F386300F40CAD /* AmazonService */,
 				EFFF6F6D1C9B34B900087FD8 /* FireBaseService */,
 			);
 			name = Service;
@@ -485,15 +468,6 @@
 			name = FireBaseService;
 			sourceTree = "<group>";
 		};
-		FFA37259EA8A2CF77F681483 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				478F6A86772BC24FE9C4C05A /* Pods-CarModels.debug.xcconfig */,
-				54BF9956A8E48490EBFF4B6E /* Pods-CarModels.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -501,13 +475,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF5153ED1C85FFF1000CAA1C /* Build configuration list for PBXNativeTarget "CarModels" */;
 			buildPhases = (
-				EFEEB736113AD4C71244B79D /* Check Pods Manifest.lock */,
+				500B8330B3544C2EA0CAE40D /* 📦 Check Pods Manifest.lock */,
 				EF5153D21C85FFF1000CAA1C /* Sources */,
 				EF5153D31C85FFF1000CAA1C /* Frameworks */,
 				EF5153D41C85FFF1000CAA1C /* Resources */,
-				7289281A9F454F15C09E1E6B /* Embed Pods Frameworks */,
-				AC93A047F91B8219C9924AC2 /* Copy Pods Resources */,
 				EFF0788B1CC699920018DBAC /* ShellScript */,
+				DD63B5337C20FF52DDDE37C5 /* 📦 Embed Pods Frameworks */,
+				3994A876E4CACF73DD42AE4F /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -565,29 +539,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		7289281A9F454F15C09E1E6B /* Embed Pods Frameworks */ = {
+		3994A876E4CACF73DD42AE4F /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CarModels/Pods-CarModels-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AC93A047F91B8219C9924AC2 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
+			name = "📦 Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -595,19 +554,34 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CarModels/Pods-CarModels-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EFEEB736113AD4C71244B79D /* Check Pods Manifest.lock */ = {
+		500B8330B3544C2EA0CAE40D /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DD63B5337C20FF52DDDE37C5 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CarModels/Pods-CarModels-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EFF0788B1CC699920018DBAC /* ShellScript */ = {
@@ -630,7 +604,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFEA9A401C9F3F5000F40CAD /* ServiceImageDownloadingCaching.m in Sources */,
 				EFEB51701CD4ACAE0044526D /* AdLogicService.m in Sources */,
 				EF83F5CD1C86078300603204 /* MainViewController.m in Sources */,
 				EF93D2FE1CA057B50042C16D /* CoreDataCategory.m in Sources */,
@@ -650,7 +623,6 @@
 				EFDAE0FE1CAB2F3600580889 /* EngineInfoTableViewCell.m in Sources */,
 				EFF8228D1CA8165200F9B8A6 /* CarModelsViewController.m in Sources */,
 				EF93D3011CA057DA0042C16D /* CoreDataCompany.m in Sources */,
-				EFEA9A3C1C9F38D900F40CAD /* ServiceAmazon.m in Sources */,
 				EF2136941CA4830200731259 /* DAOCategory.m in Sources */,
 				EF93D3071CA058360042C16D /* CoreDataEngine.m in Sources */,
 				EFFF6F6C1C9B214B00087FD8 /* CategoryViewControllers.m in Sources */,
@@ -769,7 +741,7 @@
 		};
 		EF5153EE1C85FFF1000CAA1C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 478F6A86772BC24FE9C4C05A /* Pods-CarModels.debug.xcconfig */;
+			baseConfigurationReference = 731E63985DB7709AA74318F8 /* Pods-CarModels.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -786,7 +758,7 @@
 		};
 		EF5153EF1C85FFF1000CAA1C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 54BF9956A8E48490EBFF4B6E /* Pods-CarModels.release.xcconfig */;
+			baseConfigurationReference = 699001BF5EC42A8F01AD5EBC /* Pods-CarModels.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

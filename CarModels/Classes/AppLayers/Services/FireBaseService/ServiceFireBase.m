@@ -54,7 +54,6 @@ static NSString *const kFireBaseUrl = @"https://sizzling-fire-6856.firebaseio.co
     NSLog(@"fireBase %@", firebase);
     [firebase observeSingleEventOfType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
         
-        NSLog(@"%@", snapshot.value);
         completion(snapshot.value);
     }];
 }

@@ -7,7 +7,7 @@
 //
 
 #import "CurrentModelImageCollectionViewCell.h"
-#import "ServiceImageDownloadingCaching.h"
+#import "UIImageView+WebCache.h"
 
 @interface CurrentModelImageCollectionViewCell ()
 
@@ -19,37 +19,20 @@
 
 @implementation CurrentModelImageCollectionViewCell
 
-- (void)awakeFromNib {
-    
-    [super awakeFromNib];
-}
-
-- (void)prepareForReuse {
-    
-    [super prepareForReuse];
-    if (self.imageId) {
-        
-        self.imageView.image = nil;
-        [[ServiceImageDownloadingCaching sharedInstance] cancelDownloadinRequestForKey:self.imageId];
-    }
-}
 
 - (void)configureWithImageId:(NSString *)imageId bucketName:(NSString *)bucketName {
     
     self.imageId = imageId;
-    [[ServiceImageDownloadingCaching sharedInstance] getImageForBucket:bucketName
-                                                               imageID:imageId
-                                                            completion:^(UIImage *image) {
-                                                                
-                                                                // Decompress image
-                                                                if (image) {
-                                                                    
-                                                                    dispatch_async(dispatch_get_main_queue(), ^{
-                                                                        
-                                                                        self.imageView.image = image;
-                                                                    });
-                                                                }
-                                                            }];
+    
+    
+    NSString *url = [NSString stringWithFormat:@"https://%@.s3.amazonaws.com/%@", bucketName, imageId];
+    
+    
+    [self.imageView sd_setImageWithURL:[NSURL URLWithString:url]
+                      placeholderImage:nil
+                             completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+                                 
+                             }];
 }
 
 @end
